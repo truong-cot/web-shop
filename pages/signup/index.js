@@ -15,7 +15,7 @@ function LoginPage() {
               <Image src={logo} alt="logo" layout="fill" />
             </div>
             <p>
-              Bạn đã có tài khoản?{" "}
+              Bạn đã có tài khoản?
               <Link href="/login">
                 <a>Đăng nhập</a>
               </Link>
@@ -42,8 +42,11 @@ function LoginPage() {
             </div>
 
             <p>
-              Bằng việc đăng ký tham gia là bạn đã chấp nhận{" "}
-              <a href="#">điều khoản và chính sách</a> của chúng tôi
+              Bằng việc đăng ký tham gia là bạn đã chấp nhận
+              <Link href="#">
+                <a>điều khoản và chính sách</a>
+              </Link>
+              của chúng tôi
             </p>
             <div className={styles.btn}>
               <Button primary shadow rounded product>

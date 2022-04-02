@@ -16,7 +16,7 @@ function LoginPage() {
               <Image src={logo} alt="logo" layout="fill" />
             </div>
             <p>
-              Bạn chưa có tài khoản?{" "}
+              Bạn chưa có tài khoản?
               <Link href="/signup">
                 <a>Đăng kí</a>
               </Link>
