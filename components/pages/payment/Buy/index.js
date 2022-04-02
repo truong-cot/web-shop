@@ -11,7 +11,7 @@ function Buy() {
         <div className={styles.main}>
           <div className={styles.title}>
             <p>
-              Nhấn "Đặt hàng" đồng nghĩa với việc bạn đồng ý tuân theo{" "}
+              Nhấn "Đặt hàng" đồng nghĩa với việc bạn đồng ý tuân theo
               <Link href="/">
                 <a>Điều khoản Duaca</a>
               </Link>
