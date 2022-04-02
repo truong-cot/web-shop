@@ -1,0 +1,36 @@
+.container {
+  border-top: 1px solid #fafaf2;
+  .main {
+    display: grid;
+    grid-template-columns: 5fr 2fr 1fr;
+    padding: 35px 0 40px;
+
+    .title {
+      color: #060728;
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+
+    .description {
+      color: #060728;
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+
+    .link {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #325aa8;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}

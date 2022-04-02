@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Carts.module.scss";
-import Button from "./../../components/control/Button";
+import Button from "../../control/Button";
+import Link from "next/link";
 
 function FooterCart() {
   return (
@@ -21,9 +22,13 @@ function FooterCart() {
           </p>
 
           <div className={styles.btn}>
-            <Button rounded primary product>
-              Mua hàng
-            </Button>
+            <Link href="/payment">
+              <a>
+                <Button rounded primary product>
+                  Mua hàng
+                </Button>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

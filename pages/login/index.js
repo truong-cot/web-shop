@@ -18,7 +18,7 @@ function LoginPage() {
             <p>
               Bạn chưa có tài khoản?{" "}
               <Link href="/signup">
-                <a>Đăng nhập</a>
+                <a>Đăng kí</a>
               </Link>
             </p>
           </div>
@@ -32,7 +32,7 @@ function LoginPage() {
             </div>
             <a href="#">Quên mật khẩu?</a>
             <div className={styles.btn}>
-              <Button primary shadow rounded small>
+              <Button primary shadow rounded product>
                 Đăng nhập
               </Button>
             </div>

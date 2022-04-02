@@ -2,22 +2,31 @@ import React from "react";
 import styles from "./Carts.module.scss";
 import Layout from "../../components/widgets/Layout";
 
-import Oder from "./Oder.js";
-import Logo from "./Logo.js";
-import FooterCart from "./FooterCart";
+import Oder from "./../../components/pages/carts/Oder";
+import Logo from "./../../components/pages/carts/Logo";
+import FooterCart from "./../../components/pages/carts/FooterCart";
 
 function Carts() {
   return (
-    <div>
+    <div className={styles.carts}>
       <Logo></Logo>
-      <div className={styles.listOder}>
-        <div className="container">
-          <Oder></Oder>
-          <Oder></Oder>
-          <Oder></Oder>
-          <Oder></Oder>
-          <Oder></Oder>
-          <Oder></Oder>
+      <div className="container">
+        <div className={styles.cartsContainer}>
+          <div className={styles.menuCart}>
+            <p className={styles.title}>Sản phẩm</p>
+            <div className={styles.des}>
+              <p>Số lượng</p>
+              <p>Số tiền</p>
+              <p>Thao tác</p>
+            </div>
+          </div>
+          <div className={styles.listOder}>
+            <Oder></Oder>
+            <Oder></Oder>
+            <Oder></Oder>
+            <Oder></Oder>
+            <Oder></Oder>
+          </div>
         </div>
       </div>
       <FooterCart></FooterCart>

@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  grid-template-columns: 4fr 2fr 4fr 1fr;
+  padding: 14px 0 32px;
+
+  .input {
+    input {
+      width: 80%;
+      padding: 16px 24px;
+      border: 1px solid #c4c4c499;
+      border-radius: 8px;
+    }
+  }
+
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #000000;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .groupRadio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .radio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      input {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

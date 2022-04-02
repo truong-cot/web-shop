@@ -1,5 +1,5 @@
 import styles from "./Carts.module.scss";
-import logo from "./../../assets/images/logo.svg";
+import logo from "./../../../assets/images/bg.jpg";
 import React from "react";
 
 function Oder() {

@@ -46,7 +46,7 @@ function LoginPage() {
               <a href="#">điều khoản và chính sách</a> của chúng tôi
             </p>
             <div className={styles.btn}>
-              <Button primary shadow rounded small>
+              <Button primary shadow rounded product>
                 Đăng ký
               </Button>
             </div>

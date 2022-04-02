@@ -40,8 +40,8 @@ function Header() {
               </Link>
             </li>
           </ul>
-          {/* <HeaderNotLogin /> */}
-          <HeaderLogin />
+          <HeaderNotLogin />
+          {/* <HeaderLogin /> */}
         </div>
       </div>
     </div>

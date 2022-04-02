@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Carts.module.scss";
 import Link from "next/link";
-import logo from "./../../assets/images/logo.svg";
+import logo from "./../../../assets/images/logo.svg";
 
 function Logo() {
   return (

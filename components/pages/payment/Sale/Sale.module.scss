@@ -1,0 +1,27 @@
+.container {
+  border-top: 1px solid #fafaf2;
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+
+    .title {
+      color: #060728;
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+
+    .link {
+      a {
+        color: #325aa8;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+}
