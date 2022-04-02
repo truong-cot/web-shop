@@ -1,0 +1,54 @@
+.btn {
+  background-color: rgb(238, 238, 238);
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s;
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.btn + .btn {
+  margin-left: 8px;
+}
+
+.primary {
+  background-color: #fcc661;
+  color: #fff;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #fcc661;
+}
+
+.rounded {
+  border-radius: 50px;
+}
+
+.shadow {
+  box-shadow: 2px 3px 6px rgba(252, 198, 97, 0.3);
+}
+
+.small {
+  padding: 2px 2px;
+}
+
+.big {
+  padding: 20px 40px;
+}
+
+.product {
+  padding: 12px 54px;
+}
+
+.search {
+  border: 1px solid #f8b945;
+  color: #f8b945;
+  background-color: #fafaf2;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
