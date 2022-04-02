@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Payment.module.scss";
 
-import img from "./../../../assets/images/bg.jpg";
+import img from "./../../../assets/images/banner1.svg";
 
 function Product() {
   return (
