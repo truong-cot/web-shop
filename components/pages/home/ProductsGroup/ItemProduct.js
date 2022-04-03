@@ -18,9 +18,9 @@ function ItemProduct() {
       </div>
 
       <div className={styles.title}>
-        <Link href="/productDetail">
-          <a>Áo phông trắng mua hè</a>
-        </Link>
+        <a>
+          <Link href="/productDetail">Áo phông trắng mua hè</Link>
+        </a>
       </div>
 
       <div className={styles.description}>
