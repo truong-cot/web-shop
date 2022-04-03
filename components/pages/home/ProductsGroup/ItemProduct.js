@@ -10,7 +10,7 @@ function ItemProduct() {
   return (
     <div className={styles.itemMain}>
       <div className={styles.img}>
-        <Link href="/productDetail" className={styles.img}>
+        <Link href="/productDetail">
           <a>
             <img src={imgItemProduct.src} alt="anh san pham" />
           </a>
@@ -18,9 +18,9 @@ function ItemProduct() {
       </div>
 
       <div className={styles.title}>
-        <a>
-          <Link href="/productDetail">Áo phông trắng mua hè</Link>
-        </a>
+        <Link href="/productDetail">
+          <a>Áo phông trắng mua hè</a>
+        </Link>
       </div>
 
       <div className={styles.description}>
