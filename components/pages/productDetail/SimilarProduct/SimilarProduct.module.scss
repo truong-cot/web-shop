@@ -1,0 +1,18 @@
+.container {
+  .main {
+    .title {
+      padding: 65px 0 50px;
+      color: #f8b945;
+      font-size: 24px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+
+    .groupProduct {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 24px;
+      padding-bottom: 84px;
+    }
+  }
+}

@@ -13,6 +13,7 @@ function Button(props) {
     [styles.big]: props.big,
     [styles.search]: props.search,
     [styles.product]: props.product,
+    [styles.productDetail]: props.productDetail,
   });
 
   return <button className={classes}>{props.children}</button>;
