@@ -1,0 +1,77 @@
+.container {
+  .main {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    min-width: 550px;
+    max-height: 80vh;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: rgb(241, 241, 241);
+      border-radius: 4px;
+      box-shadow: inset 0 0 5px grey;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    .title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 24px;
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 4px;
+        width: 28px;
+        height: 28px;
+      }
+
+      p {
+        color: #060728;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+
+    .des {
+      color: #000000;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .postTitle {
+      padding-top: 25px;
+      color: #000000;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+  }
+}
