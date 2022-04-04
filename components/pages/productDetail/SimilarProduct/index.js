@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./SimilarProduct.module.scss";
-import ItemProduct from "./../../home/ProductsGroup/ItemProduct";
+import ItemProduct from "./../../home/Products/ItemProduct";
 
 function SimilarProduct() {
   return (
