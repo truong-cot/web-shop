@@ -37,7 +37,10 @@
     font-weight: 400;
   }
 
-  .size,
+  .size {
+    margin-left: 10px;
+  }
+
   .price {
     justify-content: flex-start;
   }
