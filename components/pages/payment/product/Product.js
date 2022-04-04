@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./Payment.module.scss";
+import styles from "./Product.module.scss";
 
-import img from "./../../../assets/images/products/ItemProduct.png";
+import img from "./../../../../assets/images/products/ItemProduct.png";
 
 function Product() {
   return (
@@ -16,6 +16,10 @@ function Product() {
             industry
           </p>
         </div>
+
+        <p className={styles.size}>
+          <span>M</span>
+        </p>
         <p className={styles.price}>
           đ<span>200.000</span>
         </p>

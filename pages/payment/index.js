@@ -1,6 +1,6 @@
 import React from "react";
-import Address from "../../components/pages/payment/Address";
-import Product from "../../components/pages/payment/Product";
+import Address from "../../components/pages/payment/address/Address";
+import Product from "../../components/pages/payment/product/Product";
 import Note from "./../../components/pages/payment/Note";
 import Sale from "./../../components/pages/payment/Sale";
 import MethodPay from "./../../components/pages/payment/MethodPay";
@@ -19,6 +19,7 @@ function Payment() {
         <div className="container">
           <div className={styles.rowTitle}>
             <p>Sản phẩm</p>
+            <p>Size</p>
             <p>Đơn giá</p>
             <p>Số lượng</p>
             <p>Thành tiền</p>

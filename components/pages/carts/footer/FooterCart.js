@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./Carts.module.scss";
-import Button from "../../control/Button";
+import styles from "./Footer.module.scss";
+import Button from "../../../control/Button";
 import Link from "next/link";
 
 function FooterCart() {

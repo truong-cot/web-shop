@@ -4,20 +4,30 @@
   padding: 24px 50px 8px;
 
   .menuCart {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
     margin: 24px 0 42px;
 
     .des {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
       p {
-        margin-left: 78px;
+        display: flex;
+        justify-content: flex-end;
         color: #75818f;
         font-size: 14px;
         line-height: 20px;
         font-weight: 400;
       }
+
+      p:nth-child(2),
+      p:nth-child(3),
+      p:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        margin-left: 24px;
+      }
     }
 
     .title {
@@ -25,156 +35,6 @@
       font-size: 16px;
       line-height: 20px;
       font-weight: 400;
-    }
-  }
-}
-
-.logo {
-  display: flex;
-  align-items: flex-end;
-  margin-top: 22px;
-  margin-bottom: 36px;
-
-  .title {
-    margin-left: 32px;
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #f8b945;
-  }
-}
-
-.oder {
-  margin-bottom: 50px;
-  .container {
-    display: flex;
-    position: relative;
-
-    input[type="checkbox"] {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      width: 20px;
-      height: 20px;
-      background-color: #fcc661;
-      border: none;
-    }
-
-    .img {
-      margin-left: 32px;
-      margin-right: 16px;
-      min-width: 76px;
-      height: 76px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-      }
-    }
-
-    .des {
-      max-width: 300px;
-      color: #000000;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 400;
-      margin-right: 197px;
-    }
-
-    .control {
-      display: flex;
-      justify-content: center;
-      margin: 0 49px 0 58px;
-      width: 85px;
-      height: 25px;
-      border: 1px solid #ccc;
-
-      span {
-        border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-        padding: 0 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      button {
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    .price {
-      display: flex;
-      color: #000000;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 400;
-      margin-top: 1px;
-    }
-
-    .btnDelete {
-      margin-left: 92px;
-
-      button {
-        background-color: #fff;
-        color: #060728;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 400;
-      }
-    }
-  }
-}
-
-.footerCart {
-  box-shadow: 0px -4px 10px 0px #0000001a;
-  padding: 44px 0 32px 0;
-  position: sticky;
-  bottom: 0;
-  z-index: 99;
-  background-color: #fff;
-  .container {
-    display: flex;
-    align-items: flex-start;
-
-    input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
-      background-color: #fcc661;
-      border: none;
-    }
-
-    .title {
-      margin-left: 32px;
-      max-width: 110px;
-      color: #000000;
-      font-size: 16px;
-      line-height: 20px;
-      font-weight: 400;
-      margin-right: 398px;
-    }
-
-    .totalPay {
-      margin-left: 32px;
-      max-width: 132px;
-      color: #000000;
-      font-size: 16px;
-      line-height: 20px;
-      font-weight: 400;
-      margin-right: 50px;
-    }
-
-    .price {
-      color: #f8b945;
-      font-size: 24px;
-      line-height: 20px;
-      font-weight: 600;
-      margin-right: 52px;
     }
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./Payment.module.scss";
+import styles from "./Address.module.scss";
 
-import Button from "./../../control/Button";
+import Button from "./../../../control/Button";
 
 import { FaMapMarkerAlt } from "react-icons/fa";
 
