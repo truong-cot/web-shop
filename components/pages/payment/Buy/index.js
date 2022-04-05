@@ -12,7 +12,7 @@ function Buy() {
           <div className={styles.title}>
             <p>
               Nhấn Đặt Hàng đồng nghĩa với việc bạn đồng ý tuân theo
-              <Link href="/">
+              <Link href="./terms-of-service">
                 <a>Điều khoản Duaca</a>
               </Link>
             </p>
