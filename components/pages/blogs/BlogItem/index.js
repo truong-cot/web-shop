@@ -11,7 +11,7 @@ function BlogItem() {
     <div className={styles.container}>
       <div className={styles.main}>
         <div className={styles.image}>
-          <Link href="#">
+          <Link href="./blog-detail">
             <a>
               <img src={imageBlog.src} alt="anh blog" />
             </a>
@@ -19,7 +19,7 @@ function BlogItem() {
         </div>
 
         <div className={styles.title}>
-          <Link href="#">
+          <Link href="./blog-detail">
             <a>
               <h4>Lorem ipsum dolor sit amet</h4>
             </a>
@@ -42,6 +42,7 @@ function BlogItem() {
             </p>
           </div>
         </div>
+
         <div className={styles.content}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
