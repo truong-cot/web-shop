@@ -1,0 +1,53 @@
+.container {
+  background-color: #fafaf2;
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 52px 0 25px;
+    .input {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 12px 20px;
+      position: relative;
+      background-color: #fff;
+      width: 400px;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #75818f;
+      font-size: 20px;
+    }
+
+    input {
+      padding: 0 20px;
+      color: #75818f;
+      size: 14px;
+      line-height: 24px;
+      min-width: 300px;
+      font-weight: 400;
+      background-color: #fff;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      flex: 1;
+
+      .item {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        a {
+          text-decoration: none;
+          color: #75818f;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

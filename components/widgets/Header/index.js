@@ -30,12 +30,7 @@ function Header() {
               </Link>
             </li>
             <li className={styles.item}>
-              <Link href="/">
-                <a>Trực tiếp</a>
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link href="/">
+              <Link href="/blogs">
                 <a>Blog</a>
               </Link>
             </li>

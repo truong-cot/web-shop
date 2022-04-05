@@ -4,7 +4,7 @@ import styles from "./Information.module.scss";
 import { BsFillStarFill, BsCartCheck } from "react-icons/bs";
 import Button from "../../../control/Button";
 
-import imageProduct from "./../../../../assets/images/productDetail/imageProduct.png";
+import imageProduct from "./../../../../assets/images/product-detail/imageProduct.png";
 
 function Information() {
   return (

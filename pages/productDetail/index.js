@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./ProductDetail.module.scss";
 import Search from "./../../components/pages/home/Search";
 
-import Information from "./../../components/pages/productDetail/Information";
-import DescriptionProduct from "./../../components/pages/productDetail/DescriptionProduct";
-import ReviewProduct from "./../../components/pages/productDetail/ReviewProduct";
-import SimilarProduct from "./../../components/pages/productDetail/SimilarProduct";
+import Information from "./../../components/pages/product-detail/Information";
+import DescriptionProduct from "./../../components/pages/product-detail/DescriptionProduct";
+import ReviewProduct from "./../../components/pages/product-detail/ReviewProduct";
+import SimilarProduct from "./../../components/pages/product-detail/SimilarProduct";
 
 function ProductDetail() {
   return (
