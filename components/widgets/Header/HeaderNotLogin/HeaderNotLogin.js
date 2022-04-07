@@ -1,9 +1,10 @@
-import Button from "../../control/Button";
+import Button from "./../../../control/Button";
 import Link from "next/link";
+import styles from "./HeaderNotLogin.module.scss";
 
 function HeaderNotLogin() {
   return (
-    <div>
+    <div className={styles.container}>
       <Link href="/login">
         <a>
           <Button light rounded>

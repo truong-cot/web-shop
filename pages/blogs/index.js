@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Blogs.module.scss";
 import BlogGroup from "./../../components/pages/blogs/BlogGroup";
-import SearchHearer from "../../components/pages/blogs/SearchHeader";
+import SearchHearer from "./../components/pages/blogs/SearchHeader";
 
 function Blogs() {
   return (

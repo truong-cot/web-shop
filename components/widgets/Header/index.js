@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import logo from "../../../assets/images/logo.svg";
-import HeaderNotLogin from "./Header.notLogin";
-import HeaderLogin from "./Header.login";
+import logo from "./../../../assets/images/logo.svg";
+import HeaderLogin from "./HeaderLogin/HeaderLogin";
+import HeaderNotLogin from "./HeaderNotLogin/HeaderNotLogin";
 
 import styles from "./Header.module.scss";
 
@@ -28,6 +28,11 @@ function Header() {
               <Link href="/carts">
                 <a>Đơn hàng</a>
               </Link>
+              <div className={styles.quantity}>
+                <p>
+                  + <span>5</span>
+                </p>
+              </div>
             </li>
             <li className={styles.item}>
               <Link href="/blogs">
@@ -35,8 +40,8 @@ function Header() {
               </Link>
             </li>
           </ul>
-          <HeaderNotLogin />
-          {/* <HeaderLogin /> */}
+          {/* <HeaderNotLogin /> */}
+          <HeaderLogin />
         </div>
       </div>
     </div>
