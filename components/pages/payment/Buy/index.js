@@ -18,9 +18,11 @@ function Buy() {
             </p>
           </div>
           <div className={styles.btn}>
-            <Button primary rounded product>
-              Mua hàng
-            </Button>
+            <Link href="/paymentSuccess">
+              <Button primary rounded product>
+                Mua hàng
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,7 +4,8 @@
 
 .main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px;
 }
 
 .ItemClassify {
@@ -20,6 +21,8 @@
     align-items: center;
     border: 1px solid #edede6;
     border-radius: 10px;
+    width: 84px;
+    height: 78px;
 
     img {
       padding: 12px;

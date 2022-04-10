@@ -16,13 +16,8 @@ function Classify() {
       <div className="container">
         <div className={styles.main}>
           <ItemClassify image={classify1} des="Hot trong ngày" />
-          <ItemClassify image={classify2} des="Thực phẩm" />
-          <ItemClassify image={classify3} des="Vận chuyển" />
-          <ItemClassify image={classify4} des="Khoan đục lắp ghép" />
-          <ItemClassify image={classify5} des="Giúp việc" />
-          <ItemClassify image={classify6} des="Đầu bếp" />
-          <ItemClassify image={classify7} des="Điện nước" />
-          <ItemClassify image={classify8} des="Điều hòa" />
+          <ItemClassify image={classify2} des="Deal sốc" />
+          <ItemClassify image={classify3} des="Combo hủy diệt" />
         </div>
       </div>
     </div>

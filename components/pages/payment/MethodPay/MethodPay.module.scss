@@ -19,17 +19,18 @@
       font-weight: 400;
     }
 
-    .link {
+    .btn {
       display: flex;
       justify-content: flex-end;
       align-items: center;
 
-      a {
-        text-decoration: none;
+      button {
+        background-color: #fff;
         color: #325aa8;
         font-size: 14px;
         line-height: 20px;
         font-weight: 600;
+        padding: 0;
       }
     }
   }
