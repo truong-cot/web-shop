@@ -56,7 +56,7 @@ function ChangeAddress({ handleClose }) {
       </div>
 
       <div className={styles.button}>
-        <Button primary rounded>
+        <Button primary rounded productDetail>
           Giao đến địa chỉ này
         </Button>
       </div>
