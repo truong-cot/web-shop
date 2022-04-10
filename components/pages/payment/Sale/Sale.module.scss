@@ -14,13 +14,30 @@
       font-weight: 600;
     }
 
-    .link {
-      a {
+    .btn {
+      button {
+        background-color: #fff;
         color: #325aa8;
         font-size: 14px;
         line-height: 20px;
         font-weight: 600;
-        text-decoration: none;
+        padding: 0;
+      }
+    }
+    .change {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .main {
+        display: flex;
+        flex-direction: column;
       }
     }
   }

@@ -111,21 +111,19 @@ function Footer() {
             <div className={styles.footerItem}>
               <h3>BẤM LIKE ĐỂ NHẬN NGAY ƯU ĐÃI</h3>
               <div className={styles.iframe}>
-                <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmixigaming&amp;
-                  tabs=timeline&amp;
-                  width=500&amp;
-                  height=500&amp;
-                  small_header=false&amp;
-                  adapt_container_width=true&amp;
-                  hide_cover=false&amp;
-                  show_facepile=false&amp;
-                  appId=339596584440998"
+                {/* <iframe
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftruongcot.1609%2F&tabs=timeline&width=0&height=0&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+                  style={{
+                    border: "none",
+                    overflow: "hidden",
+                    height: "500px",
+                    width: "500px",
+                  }}
                   scrolling="no"
-                  width="100%"
-                  height="158px"
+                  frameborder="0"
+                  allowfullscreen="true"
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                ></iframe>
+                ></iframe> */}
               </div>
               <h3>TẢI ỨNG DỤNG DUACA</h3>
               <div className={styles.btns}>

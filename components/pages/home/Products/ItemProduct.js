@@ -47,9 +47,13 @@ function ItemProduct() {
       <div className={styles.price}>
         <h5>300.000đ</h5>
         <div className={styles.btnProduct}>
-          <Button>
-            <img src={imgBtnAddCart.src} alt="anh btn" />
-          </Button>
+          <Link href="/product-detail">
+            <a>
+              <Button>
+                <img src={imgBtnAddCart.src} alt="anh btn" />
+              </Button>
+            </a>
+          </Link>
         </div>
       </div>
     </div>

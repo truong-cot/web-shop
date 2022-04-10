@@ -23,11 +23,9 @@ function FooterCart() {
 
           <div className={styles.btn}>
             <Link href="/payment">
-              <a>
-                <Button rounded primary product>
-                  Mua hàng
-                </Button>
-              </a>
+              <Button rounded primary product>
+                Mua hàng
+              </Button>
             </Link>
           </div>
         </div>
