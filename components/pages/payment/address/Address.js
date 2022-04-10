@@ -1,11 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./Address.module.scss";
+import ChangeAddress from "./../ChangeAddress";
 
 import Button from "./../../../control/Button";
 
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 function Address() {
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => {
+    setShow(!show);
+  };
+
   return (
     <div className={styles.payment}>
       <div className="container">
@@ -30,7 +38,15 @@ function Address() {
           </div>
 
           <div className={styles.btn}>
-            <Button>Thay đổi</Button>
+            <Button onClick={handleShow}>Thay đổi</Button>
+
+            {show && <div className="overlay"></div>}
+
+            {show && (
+              <div className={styles.change}>
+                <ChangeAddress handleClose={handleShow} />
+              </div>
+            )}
           </div>
         </div>
       </div>

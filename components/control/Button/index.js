@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./Button.module.scss";
 
-function Button(props) {
+function Button({ onClick, ...props }) {
   const classes = clsx(styles.btn, {
     [styles.primary]: props.primary,
     [styles.light]: props.light,
@@ -16,7 +16,11 @@ function Button(props) {
     [styles.productDetail]: props.productDetail,
   });
 
-  return <button className={classes}>{props.children}</button>;
+  return (
+    <button className={classes} onClick={onClick}>
+      {props.children}
+    </button>
+  );
 }
 
 export default Button;
