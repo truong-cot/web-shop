@@ -46,6 +46,7 @@ function Information() {
             {listImage.map((imageItem, index) => {
               return (
                 <div
+                  key={index}
                   className={styles.item}
                   onClick={() => setChangeImage(imageItem)}
                 >
