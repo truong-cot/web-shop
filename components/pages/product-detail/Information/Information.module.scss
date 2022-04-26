@@ -10,6 +10,18 @@
       .imageInfo {
         grid-column: 1 / span 4;
         grid-row: 1;
+
+        img {
+          width: 400px;
+          height: 400px;
+        }
+      }
+
+      .item {
+        img {
+          width: 87px;
+          height: 87px;
+        }
       }
     }
 
@@ -116,12 +128,25 @@
         gap: 14px;
 
         button {
-          min-width: 80px;
-          min-height: 30px;
+          width: 80px;
+          height: 30px;
           border-radius: 4px;
           background-color: #fff;
           border: 1px solid #f8b945;
           cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            background-color: #ee4d2d;
+            color: #fff;
+          }
+
+          .active {
+            border: 1px solid #ee4d2d;
+          }
         }
       }
     }
@@ -139,19 +164,21 @@
       }
 
       .groupBtn {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         margin: 0 49px 0 58px;
         width: 85px;
         height: 25px;
         border: 1px solid #ccc;
+        width: 142px;
+        height: 42px;
 
         button {
           background-color: #fff;
+          cursor: pointer;
           display: flex;
           justify-content: center;
           align-items: center;
-          cursor: pointer;
         }
 
         span {

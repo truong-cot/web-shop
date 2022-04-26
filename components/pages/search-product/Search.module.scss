@@ -1,17 +1,5 @@
 .container {
   .main {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    min-width: 550px;
-    max-height: 80vh;
-    overflow: auto;
-
     &::-webkit-scrollbar {
       width: 4px;
     }

@@ -1,36 +1,58 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./Information.module.scss";
 
 import { BsFillStarFill, BsCartCheck } from "react-icons/bs";
 import Button from "../../../control/Button";
 
 import imageProduct from "./../../../../assets/images/productDetail/imageProduct.png";
+import image1 from "./../../../../assets/images/productDetail/image1.png";
+import image2 from "./../../../../assets/images/productDetail/image2.png";
+import image3 from "./../../../../assets/images/productDetail/image3.png";
+import image4 from "./../../../../assets/images/productDetail/image4.png";
 
 function Information() {
+  // Get value size
+  const sizes = ["S", "M", "L", "XL"];
+  const [getValueSize, setGetValueSize] = useState(imageProduct);
+
+  // Change image product
+  const listImage = [image1, image2, image3, image4];
+  const [changeImage, setChangeImage] = useState(imageProduct);
+
+  // Change quantity
+  const [quantity, setQuantity] = useState(1);
+
+  const handleReduce = () => {
+    setQuantity(quantity - 1);
+    if (quantity <= 0) {
+      setQuantity(0);
+    }
+  };
+
+  const handleIncrease = () => {
+    setQuantity(quantity + 1);
+  };
+
   return (
     <div className={styles.container}>
       <div className="container">
         <div className={styles.main}>
           <div className={styles.image}>
             <div className={styles.imageInfo}>
-              <img src={imageProduct.src} alt="anh chi tiet san pham" />
+              <img src={changeImage.src} alt="anh chi tiet san pham" />
             </div>
 
-            <div className={styles.item}>
-              <img src={imageProduct.src} alt="anh chi tiet san pham" />
-            </div>
-
-            <div className={styles.item}>
-              <img src={imageProduct.src} alt="anh chi tiet san pham" />
-            </div>
-
-            <div className={styles.item}>
-              <img src={imageProduct.src} alt="anh chi tiet san pham" />
-            </div>
-
-            <div className={styles.item}>
-              <img src={imageProduct.src} alt="anh chi tiet san pham" />
-            </div>
+            {listImage.map((imageItem, index) => {
+              return (
+                <div
+                  className={styles.item}
+                  onClick={() => setChangeImage(imageItem)}
+                >
+                  <img src={imageItem.src} alt="anh chi tiet san pham" />
+                </div>
+              );
+            })}
           </div>
 
           <div className={styles.informaiton}>
@@ -70,19 +92,27 @@ function Information() {
                 <p>Size</p>
               </div>
               <div className={styles.groupSize}>
-                <button>S</button>
-                <button>M</button>
-                <button>L</button>
-                <button>XL</button>
+                {sizes.map((size, index) => {
+                  return (
+                    <Button
+                      key={index}
+                      onClick={() => {
+                        setGetValueSize(size);
+                      }}
+                    >
+                      {size}
+                    </Button>
+                  );
+                })}
               </div>
             </div>
 
             <div className={styles.quantity}>
               <p className={styles.title}>Số lượng</p>
               <div className={styles.groupBtn}>
-                <button>-</button>
-                <span>2</span>
-                <button>+</button>
+                <button onClick={handleReduce}>-</button>
+                <span>{quantity}</span>
+                <button onClick={handleIncrease}>+</button>
               </div>
             </div>
 

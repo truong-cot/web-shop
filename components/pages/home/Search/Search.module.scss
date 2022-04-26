@@ -30,7 +30,22 @@
       padding: 12px 20px;
       position: relative;
       background-color: #fff;
-      z-index: 150;
+      z-index: 300;
+
+      .searchMain {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        min-width: 550px;
+        max-height: 80vh;
+        overflow: auto;
+        z-index: 250;
+      }
     }
 
     .icon {

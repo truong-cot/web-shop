@@ -24,8 +24,13 @@ function Search() {
             {keyword !== "" && (
               <div className="overlay" onClick={handleClick}></div>
             )}
+
             <div className={styles.input}>
-              {keyword !== "" && <SearchProduct keyword={keyword} />}
+              {keyword !== "" && (
+                <div className={styles.searchMain}>
+                  <SearchProduct keyword={keyword} />
+                </div>
+              )}
               <input
                 type="text"
                 placeholder="Tìm kiếm"
