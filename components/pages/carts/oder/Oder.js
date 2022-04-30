@@ -25,9 +25,7 @@ function Oder() {
             đ<p>250.000</p>
           </span>
           <div className={styles.control}>
-            <button>-</button>
             <span>2</span>
-            <button>+</button>
           </div>
           <span className={styles.price}>
             đ<p>250.000</p>
