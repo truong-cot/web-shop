@@ -73,7 +73,7 @@ function InformationUser() {
                     <Image src={avatar} alt="avatar"></Image>
                   </div>
                   <div className={styles.input}>
-                    <label class="custom-file-upload">
+                    <label>
                       <input type="file" />
                       Chọn ảnh
                     </label>
