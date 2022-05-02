@@ -7,7 +7,7 @@ import Link from "next/link";
 function LogOut() {
   return (
     <div className={styles.container}>
-      <Link href="#">
+      <Link href="/informationUser">
         <a className={styles.account}>
           <div className={styles.icon}>
             <FiUser></FiUser>
