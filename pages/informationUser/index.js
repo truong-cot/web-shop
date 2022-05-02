@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./InformationUser.module.scss";
 import NavProfile from "./../../components/pages/profile/NavProfile";
 import ContentProfile from "./../../components/pages/profile/ContentProfile";
+import Image from "next/image";
 
 import avatar from "./../../assets/images/avatar.svg";
 import Button from "./../../components/control/Button";
@@ -69,7 +70,7 @@ function InformationUser() {
                 </div>
                 <div className={styles.img}>
                   <div className={styles.avatar}>
-                    <img src={avatar.src} alt="avatar" />
+                    <Image src={avatar} alt="avatar"></Image>
                   </div>
                   <div className={styles.input}>
                     <label class="custom-file-upload">
