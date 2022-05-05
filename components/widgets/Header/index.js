@@ -9,6 +9,13 @@ import HeaderNotLogin from "./HeaderNotLogin/HeaderNotLogin";
 import styles from "./Header.module.scss";
 
 function Header() {
+  const [statusLogin, setStatusLogin] = React.useState(false);
+
+  React.useEffect(() => {
+    const isLogged = localStorage.getItem("accessToken");
+    isLogged && setStatusLogin(isLogged);
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className="container">
@@ -40,8 +47,7 @@ function Header() {
               </Link>
             </li>
           </ul>
-          {/* <HeaderNotLogin /> */}
-          <HeaderLogin />
+          {!statusLogin ? <HeaderNotLogin /> : <HeaderLogin />}
         </div>
       </div>
     </div>

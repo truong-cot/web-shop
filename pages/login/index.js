@@ -1,4 +1,6 @@
 import React from "react";
+import { useRouter } from "next/router";
+
 import Layout from "../../components/widgets/Layout";
 import styles from "./Login.module.scss";
 import Image from "next/image";
@@ -7,6 +9,14 @@ import logo from "./../../assets/images/logo.svg";
 import Button from "../../components/control/Button";
 
 function LoginPage() {
+  const router = useRouter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem("accessToken", "ashkdjhaskjdh.1232132.ihduhasiudh");
+    router.push("/");
+  };
+
   return (
     <div className={styles.container}>
       <div className="container">
@@ -23,7 +33,7 @@ function LoginPage() {
             </p>
           </div>
           <h3>Đăng nhập</h3>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className={styles.inputText}>
               <input type="text" placeholder="Nhập số điện thoại" />
             </div>
