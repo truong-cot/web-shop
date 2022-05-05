@@ -25,33 +25,6 @@
     }
   }
 
-  .coin {
-    margin-bottom: 52px;
-    .countCoin {
-      display: flex;
-      align-items: center;
-      margin-bottom: 24px;
-
-      .icon {
-        font-size: 24px;
-        color: #f4b05f;
-        margin-right: 8px;
-      }
-
-      .count {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 24px;
-        text-align: center;
-        color: #f4b05f;
-
-        span {
-          margin-left: 6px;
-        }
-      }
-    }
-  }
-
   .nav {
     padding: 0;
     .item {

@@ -29,8 +29,6 @@ function Payment() {
           <Product></Product>
           <Product></Product>
           <Product></Product>
-          <Product></Product>
-          <Product></Product>
         </div>
         <div>
           <Note></Note>

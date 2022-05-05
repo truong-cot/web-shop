@@ -42,27 +42,6 @@ function Search() {
               </div>
             </div>
           </div>
-
-          <div className={styles.item}>
-            <div className={styles.top}>
-              <p>Vị trí của bạn</p>
-              <div className={styles.address}>
-                <div className={styles.icon}>
-                  <FaMapMarkerAlt />
-                </div>
-                <h5>C14 Bắc Hà - Chung cư Bộ Công An</h5>
-              </div>
-            </div>
-            <div className={styles.icon}>
-              <BsChevronDown />
-            </div>
-          </div>
-
-          <div className={styles.item}>
-            <Button search rounded>
-              Thực đơn của bạn
-            </Button>
-          </div>
         </div>
       </div>
     </div>

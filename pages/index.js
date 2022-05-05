@@ -9,8 +9,6 @@ export default function Home() {
       <Search></Search>
       <div>
         <Products></Products>
-        <Products></Products>
-        <Products></Products>
       </div>
     </div>
   );

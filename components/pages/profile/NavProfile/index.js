@@ -19,38 +19,19 @@ function NavProfile() {
         </div>
       </div>
 
-      <div className={styles.coin}>
-        <div className={styles.countCoin}>
-          <div className={styles.icon}>
-            <IoLogoUsd />
-          </div>
-          <div className={styles.count}>
-            123456<span>XU</span>
-          </div>
-        </div>
-
-        <div className={styles.btn}>
-          <Link href="#">
-            <Button primary rounded>
-              Nap tien
-            </Button>
-          </Link>
-        </div>
-      </div>
-
       <ul className={styles.nav}>
         <li className={styles.item}>
-          <Link href="/informationUser">
+          <Link href="/information-user">
             <a>Hồ sơ cá nhân</a>
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="/transactionHistory">
+          <Link href="/transaction-history">
             <a>Lịch sử giao dịch</a>
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="/purchaseOrder">
+          <Link href="/purchase-order">
             <a>Đơn mua</a>
           </Link>
         </li>

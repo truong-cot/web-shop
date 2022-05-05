@@ -1,0 +1,23 @@
+.container {
+  margin-bottom: 24px;
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+
+    .icon {
+      font-size: 24px;
+    }
+  }
+
+  .answer {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+  }
+}

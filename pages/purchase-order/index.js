@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./PurchaseOrder.module.scss";
-import NavProfile from "./../../components/pages/profile/NavProfile";
-import ContentProfile from "./../../components/pages/profile/ContentProfile";
+import NavProfile from "../../components/pages/profile/NavProfile";
+import ContentProfile from "../../components/pages/profile/ContentProfile";
 
 function PurchaseOrder() {
   return (

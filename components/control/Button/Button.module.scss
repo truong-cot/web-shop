@@ -75,3 +75,14 @@
   background-color: #fcc661 !important;
   padding: 8px 32px !important;
 }
+
+.filter {
+  padding: 16px 32px !important;
+  border-radius: 30px;
+  background-color: #f2f4f8;
+}
+
+.filterActive {
+  background: linear-gradient(90deg, #fcc661 0%, #faea21 100%);
+  color: #fff;
+}

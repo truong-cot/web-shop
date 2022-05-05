@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Link from "next/link";
 import styles from "./Information.module.scss";
 
 import { BsFillStarFill, BsCartCheck } from "react-icons/bs";
@@ -121,9 +122,11 @@ function Information() {
               <Button rounded productDetail search>
                 Thêm vào giỏ hàng
               </Button>
-              <Button primary rounded productDetail>
-                Mua ngay
-              </Button>
+              <Link href="/payment">
+                <Button primary rounded productDetail>
+                  Mua ngay
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

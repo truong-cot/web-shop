@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./InformationUser.module.scss";
-import NavProfile from "./../../components/pages/profile/NavProfile";
-import ContentProfile from "./../../components/pages/profile/ContentProfile";
+import NavProfile from "../../components/pages/profile/NavProfile";
+import ContentProfile from "../../components/pages/profile/ContentProfile";
 import Image from "next/image";
 
 import avatar from "./../../assets/images/avatar.svg";
-import Button from "./../../components/control/Button";
+import Button from "../../components/control/Button";
 
 function InformationUser() {
   return (

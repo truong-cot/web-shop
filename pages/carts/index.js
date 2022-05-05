@@ -26,8 +26,6 @@ function Carts() {
             <Oder></Oder>
             <Oder></Oder>
             <Oder></Oder>
-            <Oder></Oder>
-            <Oder></Oder>
           </div>
         </div>
       </div>

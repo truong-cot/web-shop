@@ -18,7 +18,7 @@ function Buy() {
             </p>
           </div>
           <div className={styles.btn}>
-            <Link href="/paymentSuccess">
+            <Link href="/payment-success">
               <Button primary rounded product>
                 Mua hàng
               </Button>

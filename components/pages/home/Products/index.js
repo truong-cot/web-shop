@@ -11,8 +11,13 @@ function Products() {
       <div className={styles.productsMain}>
         <div className="container">
           <div className={styles.productsItem}>
-            <h3 className={styles.title}>ĐỒ BƠI</h3>
+            <h3 className={styles.title}>SẢN PHẨM CỦA DUCA</h3>
             <div className={styles.products}>
+              <ItemProduct></ItemProduct>
+              <ItemProduct></ItemProduct>
+              <ItemProduct></ItemProduct>
+              <ItemProduct></ItemProduct>
+              <ItemProduct></ItemProduct>
               <ItemProduct></ItemProduct>
               <ItemProduct></ItemProduct>
               <ItemProduct></ItemProduct>
@@ -23,10 +28,10 @@ function Products() {
               <ItemProduct></ItemProduct>
             </div>
             <div className={styles.btn}>
-              <Link href="/all-products">
+              <Link href="/detail-products">
                 <a>
                   <Button rounded primary product>
-                    Xem tất cả
+                    Xem thêm
                   </Button>
                 </a>
               </Link>

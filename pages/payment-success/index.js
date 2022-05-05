@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PaymentSuccess.module.scss";
 import imgPaymentSuccess from "./../../assets/images/paymentSuccess.png";
 import Link from "next/link";
-import Button from "./../../components/control/Button";
+import Button from "../../components/control/Button";
 
 function PaymentSuccess() {
   return (

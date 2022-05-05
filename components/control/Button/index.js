@@ -17,6 +17,8 @@ function Button({ onClick, ...props }) {
     [styles.voucher]: props.voucher,
     [styles.voucherDelete]: props.voucherDelete,
     [styles.voucherSave]: props.voucherSave,
+    [styles.filter]: props.filter,
+    [styles.filterActive]: props.filterActive,
   });
 
   return (
