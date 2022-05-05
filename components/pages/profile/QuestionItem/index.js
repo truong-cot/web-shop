@@ -31,7 +31,7 @@ function QuestionItem() {
             only five centuries,
           </p>
         ) : (
-          ""
+          <div />
         )}
       </div>
     </div>
