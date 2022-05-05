@@ -9,4 +9,40 @@
     gap: 42px;
     padding-top: 48px;
   }
+
+  .header {
+    background-color: #fff;
+    margin-bottom: 12px;
+
+    .list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+
+      .item {
+        list-style: none;
+        padding: 16px 36px;
+        position: relative;
+
+        // &:before {
+        //   content: "";
+        //   position: absolute;
+        //   bottom: 0;
+        //   left: 0;
+        //   width: 100%;
+        //   height: 4px;
+        //   background-color: #f8b945;
+        // }
+
+        // &:active {
+        //   color: #f8b945;
+        // }
+      }
+    }
+  }
+
+  .content {
+    // background-color: #fff;
+  }
 }
