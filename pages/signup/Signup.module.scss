@@ -44,6 +44,10 @@
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
         background-color: #ffffffdc;
         display: flex;
+
+        input {
+          width: 100%;
+        }
       }
 
       .inputText + .inputText {
@@ -66,6 +70,10 @@
         margin-bottom: 14px;
         background-color: #ffffffdc;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+        input {
+          width: 100%;
+        }
       }
 
       p {

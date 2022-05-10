@@ -1,20 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 
 import logo from "./../../../assets/images/logo.svg";
 import HeaderLogin from "./HeaderLogin/HeaderLogin";
 import HeaderNotLogin from "./HeaderNotLogin/HeaderNotLogin";
-
 import styles from "./Header.module.scss";
 
 function Header() {
-  const [statusLogin, setStatusLogin] = React.useState(false);
-
-  React.useEffect(() => {
-    const isLogged = localStorage.getItem("accessToken");
-    isLogged && setStatusLogin(isLogged);
-  }, []);
+  const { isLogin } = useSelector((state) => state.auth);
 
   return (
     <div className={styles.container}>
@@ -47,7 +42,7 @@ function Header() {
               </Link>
             </li>
           </ul>
-          {!statusLogin ? <HeaderNotLogin /> : <HeaderLogin />}
+          {isLogin ? <HeaderLogin /> : <HeaderNotLogin />}
         </div>
       </div>
     </div>

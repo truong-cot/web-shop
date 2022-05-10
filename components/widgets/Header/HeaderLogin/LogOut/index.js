@@ -4,7 +4,16 @@ import { FiUser } from "react-icons/fi";
 import { AiOutlineLogout } from "react-icons/ai";
 import Link from "next/link";
 
+import { useDispatch } from "react-redux";
+import { logout } from "./../../../../../redux/actions/auth";
+
 function LogOut() {
+  const dispatch = useDispatch();
+
+  const handlerLogOut = () => {
+    dispatch(logout());
+  };
+
   return (
     <div className={styles.container}>
       <Link href="/information-user">
@@ -23,7 +32,7 @@ function LogOut() {
           <div className={styles.icon}>
             <AiOutlineLogout></AiOutlineLogout>
           </div>
-          <div className={styles.content}>
+          <div className={styles.content} onClick={handlerLogOut}>
             <p>Đăng xuất</p>
           </div>
         </a>
