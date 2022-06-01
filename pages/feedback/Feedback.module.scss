@@ -1,0 +1,27 @@
+.container {
+  background-color: #fafaf2;
+  margin-bottom: 24px;
+  padding-bottom: 42px;
+
+  .main {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    gap: 42px;
+    padding-top: 48px;
+
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .text {
+        padding: 22px 20px;
+        width: 750px;
+        height: 300px;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

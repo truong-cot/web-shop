@@ -1,0 +1,18 @@
+.container {
+  .main {
+    padding-bottom: 40px;
+    .title {
+      padding: 42px 0 18px;
+    }
+
+    .content {
+      p {
+        text-align: justify;
+      }
+
+      h3 {
+        padding: 20px 0;
+      }
+    }
+  }
+}

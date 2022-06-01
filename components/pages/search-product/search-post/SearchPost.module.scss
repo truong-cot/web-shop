@@ -1,0 +1,20 @@
+.container {
+  .main {
+    border-bottom: 1px solid #ccc;
+    .title {
+      color: #000000;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      padding: 14px 0 2px;
+    }
+
+    .content {
+      color: #000000;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+      padding-bottom: 24px;
+    }
+  }
+}

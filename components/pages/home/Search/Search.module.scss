@@ -1,0 +1,114 @@
+.searchMain {
+  margin-top: 5px;
+  background-color: #fafaf2;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 28px 0;
+
+  .item:nth-child(1) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      padding: 0 20px;
+      color: #75818f;
+      size: 14px;
+      line-height: 24px;
+      min-width: 300px;
+      font-weight: 400;
+      background-color: #fff;
+    }
+
+    .input {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 12px 20px;
+      position: relative;
+      background-color: #fff;
+      z-index: 300;
+
+      .searchMain {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        min-width: 550px;
+        max-height: 80vh;
+        overflow: auto;
+        z-index: 250;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #75818f;
+      font-size: 20px;
+    }
+  }
+
+  .item:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      color: #f8b945;
+      width: 14px;
+      height: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top {
+      p {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #75818f;
+      }
+
+      .address {
+        display: flex;
+        margin-top: 4px;
+        margin-right: 24px;
+        .icon {
+          color: #f8b945;
+          margin-right: 4px;
+          width: 22px;
+          height: 22px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        h5 {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 600;
+          color: #060728;
+        }
+      }
+    }
+  }
+
+  .item:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item + .item {
+    border-left: 1px solid #c4c4c4;
+  }
+}

@@ -1,0 +1,44 @@
+.container {
+  .main {
+    margin-bottom: 20px;
+    .title {
+      color: #060728;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 600;
+      padding-bottom: 15px;
+    }
+
+    .description {
+      color: #000000;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+
+      p {
+        text-align: justify;
+        padding-bottom: 12px;
+      }
+    }
+
+    .posts {
+      .title {
+        color: #060728;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 600;
+        padding: 15px 0;
+      }
+
+      .postItem {
+        padding-bottom: 8px;
+        a {
+          color: #f8b945;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

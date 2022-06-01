@@ -1,0 +1,84 @@
+.container {
+  background-image: url(../../assets/images/slider4.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  padding: 80px 0;
+  .formContainer {
+    background-color: #ffffffdc;
+
+    max-width: 500px;
+    padding: 40px 70px;
+    border-radius: 20px;
+    .formHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 42px;
+      .image {
+        position: relative;
+        width: 75px;
+        height: 75px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        a {
+          text-decoration: none;
+          color: #fcc661;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h3 {
+      color: #000;
+      font-size: 48px;
+      font-weight: 600;
+    }
+    form {
+      .inputText {
+        margin: 32px 0;
+        border: 1px solid #fcc661;
+        padding: 8px 20px;
+        border-radius: 20px;
+        background-color: #ffffffdc;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+        input {
+          width: 100%;
+        }
+      }
+
+      .inputPassword {
+        border: 1px solid #fcc661;
+        padding: 8px 20px;
+        border-radius: 20px;
+        margin-bottom: 14px;
+        background-color: #ffffffdc;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+        input {
+          width: 100%;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #f8b945;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        margin-bottom: 38px;
+      }
+      .btn {
+        max-width: max-content;
+        border-radius: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.container {
+  .user {
+    display: flex;
+    margin-bottom: 20px;
+
+    .img {
+      max-width: 78px;
+      max-height: 78px;
+      margin-right: 24px;
+    }
+
+    .account {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      color: #000000;
+      margin-bottom: 6px;
+    }
+
+    .name {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+      color: #75818f;
+    }
+  }
+
+  .nav {
+    padding: 0;
+    .item {
+      list-style: none;
+      padding: 12px 0;
+      a {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+        color: #000000;
+      }
+    }
+  }
+}

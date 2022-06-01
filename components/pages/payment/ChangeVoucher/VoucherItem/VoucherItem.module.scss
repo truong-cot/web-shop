@@ -1,0 +1,98 @@
+.container {
+  position: relative;
+  background-color: #fff;
+
+  .main {
+    position: relative;
+
+    .img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        box-shadow: 2px 3px 6px rgba(109, 109, 109, 0.1);
+      }
+
+      .success {
+        position: absolute;
+        top: 8px;
+        left: 246px;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          color: #54a82d;
+          margin-right: 4px;
+        }
+
+        p {
+          color: #54a82d;
+          font-weight: 400;
+          font-size: 8px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+
+      .title {
+        padding-top: 18px;
+        color: #060728;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      .description {
+        color: #75818f;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 20px;
+      }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 12px;
+      display: flex;
+
+      .DateExpiry {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #060728;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 20px;
+
+        .icon {
+          padding: 0 4px 0 26px;
+        }
+      }
+
+      .btn {
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 20px;
+        padding-left: 100px;
+        padding-bottom: 4px;
+      }
+    }
+
+    .line {
+      position: absolute;
+      height: 1px;
+      background-color: #e4e4e499;
+      bottom: 52px;
+      width: 301px;
+      left: 15px;
+      border: 0.5px dashed rgba(228, 228, 228, 0.6);
+    }
+  }
+}

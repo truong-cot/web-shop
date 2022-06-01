@@ -1,0 +1,12 @@
+.container {
+  background-color: #fafaf2;
+  margin-bottom: 24px;
+  padding-bottom: 42px;
+
+  .main {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    gap: 42px;
+    padding-top: 48px;
+  }
+}
