@@ -32,6 +32,8 @@ function LoginPage() {
     }
 
     setLoading(true);
+
+    // Call api
     (async () => {
       try {
         const response = await authAPI.login(formData);
