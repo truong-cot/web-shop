@@ -9,7 +9,7 @@ export default function Home() {
     return state.user;
   });
 
-  console.log({ username, email });
+  // console.log({ username, email });
   return (
     <div>
       <Banner></Banner>
