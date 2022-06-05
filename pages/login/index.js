@@ -35,6 +35,7 @@ function LoginPage() {
     (async () => {
       try {
         const response = await authAPI.login(formData);
+        // console.log(response);
         if (response.status === "success") {
           toast.success(response.message || "Đăng nhập thành công");
 
@@ -55,7 +56,7 @@ function LoginPage() {
         }
         setLoading(false);
       } catch (error) {
-        console.log(error)
+        console.log(error);
         setLoading(false);
         toast.error("Đăng nhập thất bại");
       }

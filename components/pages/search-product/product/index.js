@@ -19,7 +19,7 @@ function Product() {
 
         <div className={styles.description}>
           <div className={styles.name}>
-            <p>Cá hồi tươi ngon</p>
+            <p>Quần áo nam</p>
           </div>
 
           <div className={styles.info}>

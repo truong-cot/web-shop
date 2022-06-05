@@ -6,7 +6,7 @@ function SearchPost() {
     <div className={styles.container}>
       <div className={styles.main}>
         <div className={styles.title}>
-          <p>Cách nấu canh cá siêu ngon tại nhà</p>
+          <p>Lorem ipsum dolor sit amet</p>
         </div>
         <div className={styles.content}>
           <p>

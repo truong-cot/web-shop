@@ -7,7 +7,6 @@ function Oder() {
     <div className={styles.oder}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <input type="checkbox" />
           <div className={styles.img}>
             <img src={logo.src} alt="anh don hang" />
           </div>

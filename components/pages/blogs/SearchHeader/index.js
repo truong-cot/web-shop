@@ -2,8 +2,6 @@ import React from "react";
 import styles from "./SearchHeader.module.scss";
 import { BsSearch } from "react-icons/bs";
 
-import Link from "next/link";
-
 function SearchHeader() {
   return (
     <div className={styles.container}>

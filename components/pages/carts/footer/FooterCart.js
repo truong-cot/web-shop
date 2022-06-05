@@ -8,7 +8,6 @@ function FooterCart() {
     <div className={styles.footerCart}>
       <div className="container">
         <div className={styles.container}>
-          <input type="checkbox" />
           <p className={styles.title}>
             Chọn tất cả (<span>5</span> sản phẩm)
           </p>

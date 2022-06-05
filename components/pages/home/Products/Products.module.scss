@@ -55,6 +55,11 @@
   .title {
     padding: 20px 12px;
 
+    white-space: nowrap;
+    width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     a {
       text-decoration: none;
       color: #060728;
@@ -126,6 +131,7 @@
 
   .price {
     display: flex;
+    justify-content: space-between;
     margin: 18px 12px;
 
     h5 {

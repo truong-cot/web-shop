@@ -6,22 +6,9 @@ import styles from "./Information.module.scss";
 import { BsFillStarFill, BsCartCheck } from "react-icons/bs";
 import Button from "../../../control/Button";
 
-import imageProduct from "./../../../../assets/images/productDetail/imageProduct.png";
-import image1 from "./../../../../assets/images/productDetail/image1.png";
-import image2 from "./../../../../assets/images/productDetail/image2.png";
-import image3 from "./../../../../assets/images/productDetail/image3.png";
-import image4 from "./../../../../assets/images/productDetail/image4.png";
-
-function Information({data}) {
-
+function Information({ data }) {
   // Get value size
-  const sizes = ["S", "M", "L", "XL"];
-  const [getValueSize, setGetValueSize] = useState(imageProduct);
-  const [size, setSize] = useState(data.size)
-
-  // Change image product
-  const listImage = [image1, image2, image3, image4];
-  const [changeImage, setChangeImage] = useState(imageProduct);
+  const [size, setSize] = useState(data.size);
 
   // Change quantity
   const [quantity, setQuantity] = useState(1);
@@ -37,7 +24,6 @@ function Information({data}) {
     setQuantity(quantity + 1);
   };
 
-
   return (
     <div className={styles.container}>
       <div className="container">
@@ -46,18 +32,6 @@ function Information({data}) {
             <div className={styles.imageInfo}>
               <img src={data?.img} alt="anh chi tiet san pham" />
             </div>
-
-            {listImage.map((imageItem, index) => {
-              return (
-                <div
-                  key={index}
-                  className={styles.item}
-                  onClick={() => setChangeImage(imageItem)}
-                >
-                  <img src={imageItem.src} alt="anh chi tiet san pham" />
-                </div>
-              );
-            })}
           </div>
 
           <div className={styles.informaiton}>
@@ -86,7 +60,9 @@ function Information({data}) {
 
             <div className={styles.price}>
               <del className={styles.prevPrice}>{data?.price}$</del>
-              <h4 className={styles.beforePrice}>{data.price - data.discount*data.price/100}$</h4>
+              <h4 className={styles.beforePrice}>
+                {data.price - (data.discount * data.price) / 100}$
+              </h4>
               <p className={styles.sale}>
                 -<span>{data.discount}%</span>
               </p>

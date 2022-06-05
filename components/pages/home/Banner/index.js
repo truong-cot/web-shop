@@ -3,12 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styles from "./Banner.module.scss";
-import imgBanner1 from "./../../../../assets/images/banner1.svg";
-import imgBanner2 from "./../../../../assets/images/banner2.svg";
-import imgSlider1 from "./../../../../assets/images/banner1.svg";
-import imgSlider2 from "./../../../../assets/images/banner1.svg";
-import imgSlider3 from "./../../../../assets/images/banner1.svg";
-import imgSlider4 from "./../../../../assets/images/banner1.svg";
 
 function Banner() {
   const settings = {

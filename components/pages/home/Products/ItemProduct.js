@@ -1,14 +1,25 @@
 import React from "react";
 import styles from "./Products.module.scss";
-import imgItemProduct from "../../../../assets/images/products/ItemProduct.png";
 import { BsFillStarFill, BsFillCartCheckFill } from "react-icons/bs";
 import Button from "../../../control/Button";
 import imgBtnAddCart from "../../../../assets/images/products/btnAddCart.png";
 import Link from "next/link";
 
-function ItemProduct({data}) {
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../../../redux/actions/cart";
 
-  const newCount = (data?.price - data?.discount * data?.price / 100)
+function ItemProduct({ data }) {
+  const newCount = data?.price - (data?.discount * data?.price) / 100;
+
+  // cart
+  const dispatch = useDispatch();
+  const listCart = useSelector((state) => state.cart);
+
+  // const handleAddToCart = () => {
+  //   dispatch(addToCart(data.id));
+  // };
+
+  console.log(listCart);
 
   return (
     <div className={styles.itemMain}>
@@ -50,13 +61,9 @@ function ItemProduct({data}) {
       <div className={styles.price}>
         <h5>{newCount}$</h5>
         <div className={styles.btnProduct}>
-          <Link href="/product-detail">
-            <a>
-              <Button>
-                <img src={imgBtnAddCart.src} alt="anh btn" />
-              </Button>
-            </a>
-          </Link>
+          <Button onClick={() => dispatch(addToCart(data.id))}>
+            <img src={imgBtnAddCart.src} alt="anh btn" />
+          </Button>
         </div>
       </div>
     </div>
