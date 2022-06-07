@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./BlogContent.module.scss";
 import { AiOutlineEye } from "react-icons/ai";
+import Image from "next/image";
 
 function BlogContent() {
   return (
@@ -8,7 +9,7 @@ function BlogContent() {
       <div className={styles.main}>
         <div className={styles.image}>
           <img
-            src="https://images.pexels.com/photos/999267/pexels-photo-999267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?cs=srgb&dl=pexels-pixabay-262508.jpg&fm=jpg"
             alt="anh blog"
           />
         </div>

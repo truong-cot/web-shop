@@ -1,10 +1,7 @@
 import React from "react";
 import styles from "./BlogItem.module.scss";
 import Link from "next/link";
-
 import { AiOutlineEye } from "react-icons/ai";
-
-import imageBlog from "./../../../../assets/images/blogs/imageBlog.png";
 
 function BlogItem() {
   return (
@@ -13,7 +10,10 @@ function BlogItem() {
         <div className={styles.image}>
           <Link href="./blog-detail">
             <a>
-              <img src={imageBlog.src} alt="anh blog" />
+              <img
+                src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?cs=srgb&dl=pexels-pixabay-262508.jpg&fm=jpg"
+                alt="anh blog"
+              />
             </a>
           </Link>
         </div>
