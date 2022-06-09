@@ -1,29 +1,17 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, ADJUST_QUANTILY } from "../type/cart";
+import { ADD_TO_CART, UPDATE_TO_CART, DEL_TO_CART } from "../type/cart";
 
-export const addToCart = (idProduct) => {
-  return {
-    type: ADD_TO_CART,
-    payload: {
-      id: idProduct,
-    },
-  };
+// export const getCart = (data) => {
+//   return { type: GET_CART, payload: data };
+// };
+
+export const addToCart = (data) => {
+  return { type: ADD_TO_CART, payload: data };
 };
 
-export const removeToCart = (idProduct) => {
-  return {
-    type: REMOVE_FROM_CART,
-    payload: {
-      id: idProduct,
-    },
-  };
+export const updateCart = (data) => {
+  return { type: UPDATE_TO_CART, payload: data };
 };
 
-export const adjustQuantily = (idProduct, value) => {
-  return {
-    type: ADJUST_QUANTILY,
-    payload: {
-      id: idProduct,
-      quantily: value,
-    },
-  };
+export const delToCart = (data) => {
+  return { type: DEL_TO_CART, payload: data };
 };

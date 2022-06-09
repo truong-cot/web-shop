@@ -3,13 +3,18 @@ import styles from "./Footer.module.scss";
 import Button from "../../../control/Button";
 import Link from "next/link";
 
+import { useSelector } from "react-redux";
+
 function FooterCart() {
+  // total price
+  const { cart } = useSelector((state) => state.cart);
+
   return (
     <div className={styles.footerCart}>
       <div className="container">
         <div className={styles.container}>
           <p className={styles.title}>
-            Chọn tất cả (<span>5</span> sản phẩm)
+            Tất cả (<span>{cart.length}</span> sản phẩm)
           </p>
 
           <p className={styles.totalPay}>

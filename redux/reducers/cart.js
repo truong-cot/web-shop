@@ -1,44 +1,79 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, ADJUST_QUANTILY } from "../type/cart";
+import {
+  ADD_TO_CART,
+  GET_CART,
+  UPDATE_TO_CART,
+  DEL_TO_CART,
+} from "../type/cart";
+
+import { setItemStorage } from "../../common/utils/localStorage";
 
 const initialState = {
   cart: [],
 };
 
-const cart = (state = initialState, action) => {
-  switch (action) {
-    case ADD_TO_CART:
-      const item = state.cart.find((product) => product.id === payload.id);
+const cart = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case ADD_TO_CART: {
+      if (
+        /*---------- Kiểm tra nếu đã có sản phẩm trong giỏ hàng, update số lượng ----------*/
+        state.cart.some((item) => item?._id === payload._id)
+      ) {
+        const cart = state.cart.map((item) => {
+          if (item?._id === payload._id) {
+            return {
+              ...item,
+              quantily: item.quantily + payload.quantily,
+            };
+          }
+          return item;
+        });
 
-      const inCart = state.cart.find((item) =>
-        item.id === payload.id ? true : false
-      );
+        addCarttoLocal(cart);
+        return {
+          ...state,
+          cart,
+        };
+      } else {
+        //**********************
+        //* Kiểm tra nếu chưa có sản phẩm trong giỏ hàng thêm sản phẩm về array hiện có,
+        //* thêm trường isCheck=true, isCheck=true là các sản phẩm sẽ có trong thanh toán
+        //**********************
+        const cart = [{ ...payload }, ...state.cart];
 
+        addCarttoLocal(cart);
+        return {
+          ...state,
+          cart,
+        };
+      }
+    }
+    case UPDATE_TO_CART: {
+      const cart = state.cart.map((item) => {
+        if (item?._id === payload._id) {
+          return payload;
+        }
+        return item;
+      });
+
+      addCarttoLocal(cart);
       return {
         ...state,
-        cart: inCart
-          ? state.cart.map((item) =>
-              item.id === payload.id
-                ? { ...item, quantity: item.quantity + 1 }
-                : item
-            )
-          : [...state.cart, { ...item, quantity: 1 }],
+        cart,
       };
+    }
+    case DEL_TO_CART: {
+      const cart = state.cart.filter((item) => {
+        if (item?._id !== payload._id) {
+          return item;
+        }
+      });
 
-    case REMOVE_FROM_CART:
+      addCarttoLocal(cart);
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id !== payload.id),
+        cart,
       };
-
-    case ADJUST_QUANTILY:
-      return {
-        ...state,
-        cart: state.cart.map((item) =>
-          item.id === payload.id
-            ? { ...item, quantity: payload.quantity }
-            : item
-        ),
-      };
+    }
 
     default:
       return state;
@@ -46,3 +81,7 @@ const cart = (state = initialState, action) => {
 };
 
 export default cart;
+
+const addCarttoLocal = (cart) => {
+  setItemStorage("_cart", cart);
+};

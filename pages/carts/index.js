@@ -6,7 +6,11 @@ import Oder from "./../../components/pages/carts/oder/Oder";
 import Logo from "../../components/pages/carts/logo/Logo";
 import FooterCart from "../../components/pages/carts/footer/FooterCart";
 
+import { useSelector } from "react-redux";
 function Carts() {
+  // cart
+  const { cart } = useSelector((state) => state.cart);
+
   return (
     <div className={styles.carts}>
       <Logo></Logo>
@@ -23,9 +27,9 @@ function Carts() {
             </div>
           </div>
           <div className={styles.listOder}>
-            <Oder></Oder>
-            <Oder></Oder>
-            <Oder></Oder>
+            {cart.map((item) => (
+              <Oder key={item._id} data={item}></Oder>
+            ))}
           </div>
         </div>
       </div>

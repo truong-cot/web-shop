@@ -1,10 +1,13 @@
-import React from "react";
+import React, { memo, useCallback } from "react";
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./Information.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 import { BsFillStarFill, BsCartCheck } from "react-icons/bs";
 import Button from "../../../control/Button";
+import { addToCart } from "../../../../redux/actions/cart";
 
 function Information({ data }) {
   // Get value size
@@ -23,6 +26,16 @@ function Information({ data }) {
   const handleIncrease = () => {
     setQuantity(quantity + 1);
   };
+
+  // add to cart
+  const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state.cart);
+  const handleAddProduct = useCallback(() => {
+    dispatch(addToCart({ ...data, quantily: quantity }));
+    toast.success("Thêm sản phẩm thành công");
+  }, [quantity, dispatch, data]);
+
+  // console.log(cart);
 
   return (
     <div className={styles.container}>
@@ -98,7 +111,7 @@ function Information({ data }) {
             </div>
 
             <div className={styles.control}>
-              <Button rounded productDetail search>
+              <Button rounded productDetail search onClick={handleAddProduct}>
                 Thêm vào giỏ hàng
               </Button>
               <Link href="/payment">
@@ -114,4 +127,4 @@ function Information({ data }) {
   );
 }
 
-export default Information;
+export default memo(Information);

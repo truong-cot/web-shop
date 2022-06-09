@@ -4,6 +4,7 @@ import { BsFillStarFill, BsFillCartCheckFill } from "react-icons/bs";
 import Button from "../../../control/Button";
 import imgBtnAddCart from "../../../../assets/images/products/btnAddCart.png";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../../../redux/actions/cart";
@@ -11,15 +12,14 @@ import { addToCart } from "../../../../redux/actions/cart";
 function ItemProduct({ data }) {
   const newCount = data?.price - (data?.discount * data?.price) / 100;
 
-  // cart
   const dispatch = useDispatch();
-  const listCart = useSelector((state) => state.cart);
-
-  // const handleAddToCart = () => {
-  //   dispatch(addToCart(data.id));
-  // };
-
-  console.log(listCart);
+  const { cart } = useSelector((state) => state.cart);
+  // Add to cart
+  const handleAddToCart = () => {
+    dispatch(addToCart({ ...data, quantily: 1 }));
+    toast.success("Sản phẩm đã được thêm vào giỏ hàng");
+  };
+  console.log("cart: ", cart);
 
   return (
     <div className={styles.itemMain}>
@@ -32,7 +32,7 @@ function ItemProduct({ data }) {
       </div>
 
       <div className={styles.title}>
-        <Link href="/product-detail">
+        <Link href={`/product-detail/${data?._id}`}>
           <a>{data?.title}</a>
         </Link>
       </div>
@@ -60,8 +60,8 @@ function ItemProduct({ data }) {
 
       <div className={styles.price}>
         <h5>{newCount}$</h5>
-        <div className={styles.btnProduct}>
-          <Button onClick={() => dispatch(addToCart(data.id))}>
+        <div className={styles.btnProduct} onClick={handleAddToCart}>
+          <Button>
             <img src={imgBtnAddCart.src} alt="anh btn" />
           </Button>
         </div>

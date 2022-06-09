@@ -10,6 +10,7 @@ import styles from "./Header.module.scss";
 
 function Header() {
   const { isLogin } = useSelector((state) => state.auth);
+  const { cart } = useSelector((state) => state.cart);
 
   return (
     <div className={styles.container}>
@@ -32,7 +33,7 @@ function Header() {
               </Link>
               <div className={styles.quantity}>
                 <p>
-                  + <span>5</span>
+                  + <span>{cart.length}</span>
                 </p>
               </div>
             </li>

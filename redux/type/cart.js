@@ -1,3 +1,4 @@
 export const ADD_TO_CART = "ADD_TO_CART";
-export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
-export const ADJUST_QUANTILY = "ADJUST_QUANTILY";
+export const GET_CART = "GET_CART";
+export const UPDATE_TO_CART = "UPDATE_CART";
+export const DEL_TO_CART = "DEL_TO_CART";
