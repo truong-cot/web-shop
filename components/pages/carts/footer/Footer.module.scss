@@ -5,17 +5,14 @@
   bottom: 0;
   z-index: 99;
   background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
-      background-color: #fcc661;
-      border: none;
-    }
 
     .title {
       color: #000000;
@@ -24,13 +21,10 @@
       font-weight: 400;
     }
 
-    .totalPay {
-      margin-left: 32px;
-      color: #000000;
-      font-size: 16px;
-      line-height: 20px;
-      font-weight: 400;
-      margin-right: 50px;
+    .totalPrice {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .price {

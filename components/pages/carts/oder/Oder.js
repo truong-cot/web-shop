@@ -2,7 +2,7 @@ import styles from "./Oder.module.scss";
 import React, { useRef, useEffect, useCallback } from "react";
 
 import { useDispatch } from "react-redux";
-import { delToCart } from "../../../../redux/actions/cart";
+import { delToCart, updateCart } from "../../../../redux/actions/cart";
 
 function Oder({ data }) {
   const firstUpdate = useRef(true);
@@ -25,31 +25,20 @@ function Oder({ data }) {
   }, [dispatch, data]);
 
   return (
-    <div className={styles.oder}>
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <div className={styles.img}>
-            <img src={data.img} alt="anh don hang" />
-          </div>
-          <p className={styles.des}>{data.title}</p>
+    <div className={styles.container}>
+      <div className={styles.title}>
+        <div className={styles.img}>
+          <img src={data.img} alt="anh don hang" />
         </div>
-
-        <div className={styles.infomation}>
-          <span className={styles.size}>
-            <p>M</p>
-          </span>
-          <span className={styles.price}>
-            đ<p>{data.price}</p>
-          </span>
-          <div className={styles.control}>
-            <span>{data.quantily}</span>
-          </div>
-          <span className={styles.price}>
-            đ<p>{data.quantily * newCount}</p>
-          </span>
-          <div className={styles.btnDelete} onClick={handleDleteToCart}>
-            <button>Xoá</button>
-          </div>
+        <p className={styles.name}>{data.title}</p>
+      </div>
+      <div className={styles.des}>
+        <p className={styles.size}>M</p>
+        <p className={styles.unitPrice}>đ{data.price}</p>
+        <p className={styles.quantily}>{data.quantily}</p>
+        <p className={styles.price}>đ{data.quantily * newCount}</p>
+        <div className={styles.btnDelete} onClick={handleDleteToCart}>
+          <button>Xoá</button>
         </div>
       </div>
     </div>

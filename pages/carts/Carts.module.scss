@@ -2,11 +2,14 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 24px 50px 8px;
+  margin-top: 20px;
+  height: 400px;
+  overflow: auto;
 
   .menuCart {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    margin: 24px 0 42px;
+    margin: 10px 0 24px;
 
     .des {
       display: grid;

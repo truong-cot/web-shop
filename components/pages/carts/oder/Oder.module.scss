@@ -1,94 +1,83 @@
-.oder {
-  margin-bottom: 50px;
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  margin: 10px 0 24px;
 
-    .content {
+  .title {
+    display: flex;
+    align-items: center;
+
+    .img {
+      width: 76px;
+      height: 76px;
+      margin-right: 12px;
       display: flex;
+      align-items: center;
+      justify-content: center;
 
-      input[type="checkbox"] {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        width: 20px;
-        height: 20px;
-        background-color: #fcc661;
-        border: none;
-      }
-
-      .img {
-        margin-left: 32px;
-        margin-right: 16px;
-        width: 76px;
-        height: 76px;
-
-        img {
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          border-radius: 4px;
-        }
-      }
-
-      .des {
-        max-width: 310px;
-        color: #000000;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 400;
-      }
-    }
-
-    .infomation {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-      .size {
-        display: flex;
-        color: #000000;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 400;
-        margin-top: 1px;
-      }
-
-      .price {
-        display: flex;
-        color: #000000;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 400;
-        margin-top: 1px;
-      }
-
-      .control {
-        display: flex;
-        justify-content: center;
-        margin: 0 49px 0 58px;
-        width: 85px;
-        height: 25px;
-
-        button {
-          background-color: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-
-      .btnDelete {
-        margin-left: 92px;
-
-        button {
-          background-color: #fff;
-          color: #060728;
-          font-size: 14px;
-          line-height: 20px;
-          font-weight: 400;
-        }
+      img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        border-radius: 4px;
       }
     }
   }
+
+  .des {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #75818f;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+
+    .size {
+      justify-content: flex-end;
+      margin-right: 10px;
+    }
+
+    .unitPrice {
+      margin-left: 24px;
+    }
+
+    .quantily {
+      margin-left: 36px;
+    }
+
+    .price {
+      margin-left: 36px;
+    }
+
+    .btnDelete {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      button {
+        background-color: #fff;
+        color: #060728;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        cursor: pointer;
+      }
+      :hover {
+        color: #fcc661;
+      }
+    }
+  }
+
+  // .title {
+  //   color: #000000;
+  //   font-size: 16px;
+  //   line-height: 20px;
+  //   font-weight: 400;
+  // }
 }

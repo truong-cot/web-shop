@@ -7,11 +7,11 @@ function Logo() {
   return (
     <div className="container">
       <div className={styles.logo}>
-        <Link href="/" className={styles.img}>
+        {/* <Link href="/" className={styles.img}>
           <a>
             <img src={logo.src} alt="anh logo" />
           </a>
-        </Link>
+        </Link> */}
         <p className={styles.title}>Đơn hàng</p>
       </div>
     </div>
