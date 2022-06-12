@@ -8,8 +8,10 @@ import { toast } from "react-toastify";
 import { BsFillStarFill, BsCartCheck } from "react-icons/bs";
 import Button from "../../../control/Button";
 import { addToCart } from "../../../../redux/actions/cart";
+import { router, useRouter } from "next/router";
 
 function Information({ data }) {
+  const router = useRouter();
   // Get value size
   const [size, setSize] = useState(data.size);
 
@@ -36,6 +38,12 @@ function Information({ data }) {
   }, [quantity, dispatch, data]);
 
   // console.log(cart);
+
+  // Buy product
+  const handleByProduct = useCallback(() => {
+    dispatch(addToCart({ ...data, quantily: quantity }));
+    router.push("/payment");
+  }, [quantity, dispatch, data]);
 
   return (
     <div className={styles.container}>
@@ -115,7 +123,7 @@ function Information({ data }) {
                 Thêm vào giỏ hàng
               </Button>
               <Link href="/payment">
-                <Button primary rounded productDetail>
+                <Button primary rounded productDetail onClick={handleByProduct}>
                   Mua ngay
                 </Button>
               </Link>

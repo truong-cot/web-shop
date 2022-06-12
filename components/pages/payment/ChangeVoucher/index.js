@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../../control/Button";
 import styles from "./ChangeVoucher.module.scss";
 import VoucherItem from "./VoucherItem";
 import { AiOutlineClose } from "react-icons/ai";
+
+import { dataVoucher } from "./../../../../api/dataVoucher";
 
 function ChangeVoucher({ handleClose }) {
   return (
@@ -13,16 +15,9 @@ function ChangeVoucher({ handleClose }) {
 
       <div className={styles.main}>
         <div className={styles.item}>
-          <VoucherItem />
-        </div>
-        <div className={styles.item}>
-          <VoucherItem />
-        </div>
-        <div className={styles.item}>
-          <VoucherItem />
-        </div>
-        <div className={styles.item}>
-          <VoucherItem />
+          {dataVoucher.map((item) => (
+            <VoucherItem key={item.id} data={item} />
+          ))}
         </div>
       </div>
 
@@ -35,7 +30,7 @@ function ChangeVoucher({ handleClose }) {
       </div>
 
       <div className={styles.btnSave}>
-        <Button voucherSave rounded>
+        <Button voucherSave rounded onClick={handleClose}>
           Lưu
         </Button>
       </div>

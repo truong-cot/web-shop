@@ -8,8 +8,11 @@ import TotalPay from "./../../components/pages/payment/TotalPay";
 import Buy from "./../../components/pages/payment/Buy";
 
 import styles from "./Payment.module.scss";
+import { useSelector } from "react-redux";
 
 function Payment() {
+  const { cart } = useSelector((state) => state.cart);
+
   return (
     <div>
       <div>
@@ -26,9 +29,9 @@ function Payment() {
           </div>
         </div>
         <div className={styles.products}>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
+          {cart.map((item) => (
+            <Product key={item._id} data={item}></Product>
+          ))}
         </div>
         <div>
           <Note></Note>

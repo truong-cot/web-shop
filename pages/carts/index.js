@@ -5,6 +5,7 @@ import Layout from "../../components/widgets/Layout";
 import Oder from "./../../components/pages/carts/oder/Oder";
 import Logo from "../../components/pages/carts/logo/Logo";
 import FooterCart from "../../components/pages/carts/footer/FooterCart";
+import CartEmpty from "../../components/pages/carts/CartEmpty";
 
 import { useSelector } from "react-redux";
 function Carts() {
@@ -26,11 +27,15 @@ function Carts() {
               <p>Thao tác</p>
             </div>
           </div>
-          <div className={styles.listOder}>
-            {cart.map((item) => (
-              <Oder key={item._id} data={item}></Oder>
-            ))}
-          </div>
+          {cart.length === 0 ? (
+            <CartEmpty></CartEmpty>
+          ) : (
+            <div className={styles.listOder}>
+              {cart.map((item) => (
+                <Oder key={item._id} data={item}></Oder>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <FooterCart></FooterCart>
