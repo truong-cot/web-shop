@@ -33,9 +33,7 @@ function Payment() {
             <Product key={item._id} data={item}></Product>
           ))}
         </div>
-        <div>
-          <Note></Note>
-        </div>
+        <div>{/* <Note></Note> */}</div>
         <div>
           <Sale></Sale>
         </div>

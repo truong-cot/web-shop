@@ -45,22 +45,8 @@
       font-weight: 400;
     }
 
-    select {
-      position: relative;
-      border: 1px solid #ccc;
-      padding: 12px;
-      flex: 2;
-      border: 1px solid rgba(228, 228, 228, 0.6);
-      border-radius: 25px;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 400;
-
-      select:after {
-        position: absolute;
-        content: "";
-        right: 20px;
-      }
+    .select {
+      width: 300px;
     }
   }
 

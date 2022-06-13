@@ -2,13 +2,26 @@ import React from "react";
 import { useState } from "react";
 import styles from "./Address.module.scss";
 import ChangeAddress from "./../ChangeAddress";
-
 import Button from "./../../../control/Button";
-
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 function Address() {
   const [show, setShow] = useState(false);
+  const [data, setData] = useState({});
+
+  const initLocation = {
+    name: "Tên người dùng",
+    phone: "Số điện thoại người dùng",
+    city: "Chưa có địa chỉ",
+    district: "Chưa có địa chỉ",
+    city: "Chưa có địa chỉ",
+  };
+
+  const getData = (data) => {
+    setData(data);
+  };
+
+  console.log("Data: ", data);
 
   const handleShow = () => {
     setShow(!show);
@@ -25,16 +38,17 @@ function Address() {
               </div>
               <p>Địa chỉ nhận hàng</p>
             </div>
-            <p className={styles.info}>Lê Hạnh - 039516888</p>
-            <p className={styles.add}>
-              Chung cư C14 Bắc Hà, Tố Hữu - Trung Văn
+            <p className={styles.info}>
+              <span>{data.name ? data.name : initLocation.name}</span> -{" "}
+              <span>{data.phone ? data.phone : initLocation.phone}</span>
             </p>
+            <p className={styles.add}>{data.specific}</p>
             <span className={styles.des}>
-              Tố Hữu, Phường Trung Văn, Quận Nam Từ Liêm, Hà Nội
+              {/* Tố Hữu, Phường Trung Văn, Quận Nam Từ Liêm, Hà Nội */}
+              {data.ward ? data.ward : initLocation.city} -{" "}
+              {data.district ? data.district : initLocation.district} -{" "}
+              {data.city ? data.city : initLocation.city}
             </span>
-            <p className={styles.time}>
-              Thời gian nhận hàng: 11:30 - 21/01/2022
-            </p>
           </div>
 
           <div className={styles.btn}>
@@ -44,7 +58,7 @@ function Address() {
 
             {show && (
               <div className={styles.change}>
-                <ChangeAddress handleClose={handleShow} />
+                <ChangeAddress handleClose={handleShow} getData={getData} />
               </div>
             )}
           </div>
