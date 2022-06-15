@@ -1,54 +1,58 @@
-import React from "react";
-import Address from "../../components/pages/payment/address/Address";
-import Product from "../../components/pages/payment/product/Product";
-import Note from "./../../components/pages/payment/Note";
-import Sale from "./../../components/pages/payment/Sale";
-import MethodPay from "./../../components/pages/payment/MethodPay";
-import TotalPay from "./../../components/pages/payment/TotalPay";
-import Buy from "./../../components/pages/payment/Buy";
+import { useState } from 'react';
+import Address from '../../components/pages/payment/address/Address';
+import Product from '../../components/pages/payment/product/Product';
+import Note from './../../components/pages/payment/Note';
+import Sale from './../../components/pages/payment/Sale';
+import MethodPay from './../../components/pages/payment/MethodPay';
+import TotalPay from './../../components/pages/payment/TotalPay';
+import Buy from './../../components/pages/payment/Buy';
 
-import styles from "./Payment.module.scss";
-import { useSelector } from "react-redux";
+import RequireLogin from '../../components/proteced/RequireLogin';
+import styles from './Payment.module.scss';
+import { useSelector } from 'react-redux';
 
 function Payment() {
-  const { cart } = useSelector((state) => state.cart);
+    const [data, setData] = useState({});
+    const { cart } = useSelector((state) => state.cart);
 
-  return (
-    <div>
-      <div>
-        <Address></Address>
-      </div>
-      <div>
-        <div className="container">
-          <div className={styles.rowTitle}>
-            <p>Sản phẩm</p>
-            <p>Size</p>
-            <p>Đơn giá</p>
-            <p>Số lượng</p>
-            <p>Thành tiền</p>
-          </div>
-        </div>
-        <div className={styles.products}>
-          {cart.map((item) => (
-            <Product key={item._id} data={item}></Product>
-          ))}
-        </div>
-        <div>{/* <Note></Note> */}</div>
-        <div>
-          <Sale></Sale>
-        </div>
-        <div>
-          <MethodPay></MethodPay>
-        </div>
-        <div>
-          <TotalPay></TotalPay>
-        </div>
-        <div>
-          <Buy></Buy>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+        <RequireLogin>
+            <div>
+                <div>
+                    <Address data={data} setData={setData} />
+                </div>
+                <div>
+                    <div className="container">
+                        <div className={styles.rowTitle}>
+                            <p>Sản phẩm</p>
+                            <p>Size</p>
+                            <p>Đơn giá</p>
+                            <p>Số lượng</p>
+                            <p>Thành tiền</p>
+                        </div>
+                    </div>
+                    <div className={styles.products}>
+                        {cart.map((item) => (
+                            <Product key={item._id} data={item}></Product>
+                        ))}
+                    </div>
+                    <div>{/* <Note></Note> */}</div>
+                    {/* <div>
+                    <Sale />
+                </div> */}
+                    {/* <div>
+                    <MethodPay />
+                </div> */}
+                    <div>
+                        <TotalPay />
+                    </div>
+                    <div>
+                        <Buy data={data} />
+                    </div>
+                </div>
+            </div>
+        </RequireLogin>
+    );
 }
 
 export default Payment;

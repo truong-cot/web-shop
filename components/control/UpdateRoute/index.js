@@ -7,10 +7,7 @@ function UpdateRoute() {
     const dispatch = useDispatch();
     const router = useRouter();
     useEffect(() => {
-        if (
-            router.pathname !== '/login' &&
-            router.pathname !== '/singup'
-        ) {
+        if (router.pathname !== '/login' && router.pathname !== '/signup') {
             dispatch(updateRoute(router));
         }
     }, [dispatch, router]);
