@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { login } from "./../../../redux/actions/auth";
+import { login,toggleLoading } from "./../../../redux/actions/auth";
 
 function GetData({ children }) {
   const dispatch = useDispatch();
@@ -11,6 +11,8 @@ function GetData({ children }) {
     if (token) {
       dispatch(login(token));
     }
+
+    dispatch(toggleLoading());
   }, []);
   return <>{children}</>;
 }

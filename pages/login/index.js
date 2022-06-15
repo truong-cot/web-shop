@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "./../../assets/images/logo.svg";
 import Button from "../../components/control/Button";
+import RequiredLogout from '..//../components/proteced/RequireLogout'
 
 import { updateUser } from "./../../redux/actions/user";
 import { login } from "./../../redux/actions/auth";
@@ -49,8 +50,6 @@ function LoginPage() {
 
           // Luu accessToken
           dispatch(login(response.payload.accessToken));
-
-          router.push("/");
         } else {
           toast.warn(response.message || "Đăng nhập thất bại");
         }
@@ -75,6 +74,7 @@ function LoginPage() {
   };
 
   return (
+    <RequiredLogout>
     <div className={styles.container}>
       {loading && <Loading />}
       <div className="container">
@@ -118,6 +118,7 @@ function LoginPage() {
         </div>
       </div>
     </div>
+    </RequiredLogout>
   );
 }
 

@@ -9,11 +9,14 @@ import Footer from "../components/widgets/Footer";
 import "../styles/globals.scss";
 
 import GetData from "./../components/proteced/GetData";
+import UpdateRoute from "../components/control/UpdateRoute";
 
 function MyApp({ Component, pageProps }) {
   const LayoutCustom = Component.layout;
+  
   return (
     <Provider store={store}>
+      <UpdateRoute />
       <GetData>
         <ToastContainer />
         {LayoutCustom ? (

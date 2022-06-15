@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT } from "../type/auth";
+import { LOGIN, LOGOUT,UPDATE_LOADING } from "../type/auth";
 
 export const login = (data) => {
   localStorage.setItem("token", data);
@@ -9,3 +9,5 @@ export const logout = () => {
   localStorage.removeItem("token");
   return { type: LOGOUT };
 };
+
+export const toggleLoading = () => ({ type: UPDATE_LOADING });
