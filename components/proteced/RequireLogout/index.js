@@ -6,10 +6,9 @@ import { useRouter } from 'next/router';
 import { Fragment, memo } from 'react';
 import { useSelector } from 'react-redux';
 
-
 function RequiredLogout({ children }) {
     const router = useRouter();
-    const { isLogin,isLoading } = useSelector((state) => state.auth);
+    const { isLogin, isLoading } = useSelector((state) => state.auth);
     const { routeCurrent } = useSelector((state) => state.user);
 
     /********** redirect home when user login  **********/

@@ -22,7 +22,6 @@ function PurchaseOrder() {
                             </div>
                             <div className={styles.content}>
                                 <PurchaseOrderItem />
-                                <PurchaseOrderItem />
                             </div>
                         </div>
                     </div>

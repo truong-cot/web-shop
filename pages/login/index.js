@@ -1,20 +1,20 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 
+import logo from './../../assets/images/logo.svg';
+
 import Loading from '../../components/control/Loading';
 import Layout from '../../components/widgets/Layout';
-import authAPI from '../../api/auth';
-import styles from './Login.module.scss';
-import Image from 'next/image';
-import Link from 'next/link';
-import logo from './../../assets/images/logo.svg';
 import Button from '../../components/control/Button';
 import RequiredLogout from '..//../components/proteced/RequireLogout';
-
+import authAPI from '../../api/auth';
 import { updateUser } from './../../redux/actions/user';
 import { login } from './../../redux/actions/auth';
+import styles from './Login.module.scss';
 
 function LoginPage() {
     const dispatch = useDispatch();

@@ -1,11 +1,10 @@
 import React from 'react';
-import styles from './TransactionHistory.module.scss';
+
 import NavProfile from '../../components/pages/profile/NavProfile';
-import ContentProfile from '../../components/pages/profile/ContentProfile';
-
 import RequireLogin from '../../components/proteced/RequireLogin';
-
+import ContentProfile from '../../components/pages/profile/ContentProfile';
 import TransactionHistoryEmpty from '../../components/pages/profile/TransactionHistory/Empty';
+import styles from './TransactionHistory.module.scss';
 
 function TransactionHistory() {
     return (

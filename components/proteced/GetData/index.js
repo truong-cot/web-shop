@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+
 import { login, toggleLoading } from './../../../redux/actions/auth';
 import { updateUser } from './../../../redux/actions/user';
 import { getCart } from './../../../redux/actions/cart';

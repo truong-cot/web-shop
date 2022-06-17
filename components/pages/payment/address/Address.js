@@ -1,9 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
-import styles from './Address.module.scss';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+
 import ChangeAddress from './../ChangeAddress';
 import Button from './../../../control/Button';
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import styles from './Address.module.scss';
 
 function Address({ data, setData = {} }) {
     const [show, setShow] = useState(false);

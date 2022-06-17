@@ -1,15 +1,10 @@
-import { useSelector } from 'react-redux';
 import { useMemo } from 'react';
+import { useSelector } from 'react-redux';
+
 import styles from './TotalPay.module.scss';
 
 function TotalPay() {
     const { cart } = useSelector((state) => state.cart);
-
-    // const beforePrice = useMemo(() => {
-    //     return cart.reduce((a, b) => {
-    //         return a + b.price * b.quantily;
-    //     }, 0);
-    // }, [cart]);
 
     const beforeFinish = useMemo(() => {
         return cart.reduce((a, b) => {

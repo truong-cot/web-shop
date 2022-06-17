@@ -1,29 +1,29 @@
 .rowTitle {
-  display: grid;
-  grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
-  padding: 26px 0;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
+    padding: 26px 0;
 
-  p {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color: #75818f;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-  }
+    p {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: #75818f;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
 
-  p:nth-child(1) {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #000000;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-  }
+    p:nth-child(1) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: #000000;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+    }
 }
 
 .products {
-  border-bottom: 5px solid #fafaf2;
+    border-bottom: 5px solid #fafaf2;
 }

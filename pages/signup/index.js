@@ -83,7 +83,7 @@ function LoginPage() {
                                 <Image src={logo} alt="logo" layout="fill" />
                             </div>
                             <p>
-                                Bạn đã có tài khoản?
+                                Bạn đã có tài khoản?{' '}
                                 <Link href="/login">
                                     <a>Đăng nhập</a>
                                 </Link>
@@ -126,7 +126,7 @@ function LoginPage() {
 
                             <p>
                                 Bằng việc đăng ký tham gia là bạn đã chấp nhận
-                                <Link href="#">
+                                <Link href="/terms-of-service">
                                     <a>điều khoản và chính sách</a>
                                 </Link>
                                 của chúng tôi

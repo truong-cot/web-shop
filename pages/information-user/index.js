@@ -1,12 +1,13 @@
 import React from 'react';
-import styles from './InformationUser.module.scss';
-import NavProfile from '../../components/pages/profile/NavProfile';
-import ContentProfile from '../../components/pages/profile/ContentProfile';
 import Image from 'next/image';
 
-import RequireLogin from '../../components/proteced/RequireLogin';
 import avatar from './../../assets/images/avatar.svg';
+
+import ContentProfile from '../../components/pages/profile/ContentProfile';
+import NavProfile from '../../components/pages/profile/NavProfile';
+import RequireLogin from '../../components/proteced/RequireLogin';
 import Button from '../../components/control/Button';
+import styles from './InformationUser.module.scss';
 
 function InformationUser() {
     return (

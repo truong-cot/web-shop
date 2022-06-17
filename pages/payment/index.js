@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import Address from '../../components/pages/payment/address/Address';
 import Product from '../../components/pages/payment/product/Product';
-import Note from './../../components/pages/payment/Note';
-import Sale from './../../components/pages/payment/Sale';
-import MethodPay from './../../components/pages/payment/MethodPay';
 import TotalPay from './../../components/pages/payment/TotalPay';
 import Buy from './../../components/pages/payment/Buy';
 
@@ -36,13 +33,7 @@ function Payment() {
                             <Product key={item._id} data={item}></Product>
                         ))}
                     </div>
-                    <div>{/* <Note></Note> */}</div>
-                    {/* <div>
-                    <Sale />
-                </div> */}
-                    {/* <div>
-                    <MethodPay />
-                </div> */}
+
                     <div>
                         <TotalPay />
                     </div>

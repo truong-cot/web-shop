@@ -1,37 +1,37 @@
 .container {
-  .main {
-    display: grid;
-    grid-template-columns: 1fr 15fr;
-    border-bottom: 1px solid #ccc;
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 15fr;
+        border-bottom: 1px solid #ccc;
 
-    .avatar {
-      width: 60px;
-      height: 60px;
-      margin-top: 8px;
+        .avatar {
+            width: 60px;
+            height: 60px;
+            margin-top: 8px;
+        }
+
+        .info {
+            .name {
+                padding-bottom: 4px;
+                padding-top: 20px;
+                color: #000000;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 600;
+            }
+            .star {
+                display: flex;
+                padding-bottom: 4px;
+                color: #f8b945;
+            }
+
+            .content {
+                padding-bottom: 24px;
+                color: #000000;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+            }
+        }
     }
-
-    .info {
-      .name {
-        padding-bottom: 4px;
-        padding-top: 20px;
-        color: #000000;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 600;
-      }
-      .star {
-        display: flex;
-        padding-bottom: 4px;
-        color: #f8b945;
-      }
-
-      .content {
-        padding-bottom: 24px;
-        color: #000000;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 400;
-      }
-    }
-  }
 }

@@ -1,18 +1,17 @@
 import React from "react";
-import BlogItem from "./../BlogItem";
+import BlogItem from "../BlogItem";
 
 import styles from "./BlogGroup.module.scss";
 
-function BlogGroup() {
+function BlogGroup({data}) {
+
   return (
     <div className={styles.container}>
       <div className="container">
         <div className={styles.main}>
-          <BlogItem></BlogItem>
-          <BlogItem></BlogItem>
-          <BlogItem></BlogItem>
-          <BlogItem></BlogItem>
-          <BlogItem></BlogItem>
+          {data.map((blog) => (
+            <BlogItem key={blog._id} data={blog}></BlogItem>
+          ))}
         </div>
       </div>
     </div>

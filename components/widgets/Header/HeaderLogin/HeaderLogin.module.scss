@@ -1,111 +1,111 @@
 .headerLogin {
-  display: flex;
-  align-items: center;
-  z-index: 200;
-  .notification {
-    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 24px;
-    margin-right: 60px;
     z-index: 200;
-    cursor: pointer;
-
-    .icon {
-      transition: all 3s linear;
-      position: relative;
-
-      .quantity {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: -10px;
-        right: -12px;
-        background-color: #f8b945;
-        border-radius: 50%;
-        padding: 4px;
-        font-size: 10px;
-        line-height: 20px;
-        font-weight: 600;
+    .notification {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 24px;
+        margin-right: 60px;
+        z-index: 200;
+        cursor: pointer;
 
-        span {
-          display: flex;
-          color: #000;
+        .icon {
+            transition: all 3s linear;
+            position: relative;
+
+            .quantity {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: -10px;
+                right: -12px;
+                background-color: #f8b945;
+                border-radius: 50%;
+                padding: 4px;
+                font-size: 10px;
+                line-height: 20px;
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    display: flex;
+                    color: #000;
+                }
+            }
         }
-      }
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            margin-top: 38px;
+            right: -130px;
+            z-index: 300;
+            width: 100%;
+            background-color: #fff;
+            min-width: 400px;
+            max-height: 70vh;
+            padding: 30px 38px;
+            overflow: auto;
+            box-shadow: 0px 3px 6px rgba(244, 243, 241, 0.8);
+
+            &::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: inset 0 0 5px grey;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #ccc;
+                border-radius: 4px;
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: rgb(33, 31, 31);
+                border-radius: 4px;
+            }
+        }
     }
-    .dropdown {
-      position: absolute;
-      top: 100%;
-      margin-top: 38px;
-      right: -130px;
-      z-index: 300;
-      width: 100%;
-      background-color: #fff;
-      min-width: 400px;
-      max-height: 70vh;
-      padding: 30px 38px;
-      overflow: auto;
-      box-shadow: 0px 3px 6px rgba(244, 243, 241, 0.8);
+    .headerAvatar {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        .image {
+            width: 100%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
 
-      &::-webkit-scrollbar {
-        width: 4px;
-      }
+        .logOut {
+            position: absolute;
+            padding-top: 12px;
+            top: 100%;
+            left: -120px;
+            width: 100%;
+            z-index: 10;
+            display: none;
+            min-width: 200px;
+        }
 
-      /* Track */
-      &::-webkit-scrollbar-track {
-        background: #fff;
-        border-radius: 4px;
-        box-shadow: inset 0 0 5px grey;
-      }
-
-      /* Handle */
-      &::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 4px;
-      }
-
-      /* Handle on hover */
-      &::-webkit-scrollbar-thumb:hover {
-        background: rgb(33, 31, 31);
-        border-radius: 4px;
-      }
+        &:hover .logOut {
+            display: block;
+        }
     }
-  }
-  .headerAvatar {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    .image {
-      width: 100%;
-      border-radius: 50%;
-      cursor: pointer;
+    .icon {
+        font-size: 24px;
+        color: #f8b945;
+        font-weight: 700;
+        margin-left: 4px;
+        cursor: pointer;
     }
-
-    .logOut {
-      position: absolute;
-      padding-top: 12px;
-      top: 100%;
-      left: -120px;
-      width: 100%;
-      z-index: 10;
-      display: none;
-      min-width: 200px;
-    }
-
-    &:hover .logOut {
-      display: block;
-    }
-  }
-  .icon {
-    font-size: 24px;
-    color: #f8b945;
-    font-weight: 700;
-    margin-left: 4px;
-    cursor: pointer;
-  }
 }

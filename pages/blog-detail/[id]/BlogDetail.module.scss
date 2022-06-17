@@ -1,0 +1,47 @@
+.container {
+    flex-direction: column;
+    width: 700px;
+    margin: 40px auto;
+
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .title {
+        padding: 22px 0 8px;
+        color: #18191f;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+    }
+
+    .description {
+        display: flex;
+        margin-bottom: 12px;
+
+        .time {
+            color: #999999;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 400;
+            margin-right: 34px;
+        }
+
+        .watch {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999999;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+    }
+
+    .content {
+        text-align: justify;
+    }
+}

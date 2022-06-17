@@ -1,0 +1,16 @@
+.containerEmpty {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .imgEmpty {
+        width: 1000px;
+        height: 500px;
+    }
+
+    .title {
+        margin: 32px;
+    }
+}

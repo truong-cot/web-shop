@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Feedback.module.scss';
-import NavProfile from './../../components/pages/profile/NavProfile';
-import ContentProfile from './../../components/pages/profile/ContentProfile';
 
+import ContentProfile from './../../components/pages/profile/ContentProfile';
+import NavProfile from './../../components/pages/profile/NavProfile';
 import RequireLogin from '../../components/proteced/RequireLogin';
 import Button from './../../components/control/Button';
+import styles from './Feedback.module.scss';
 
 function Feedback() {
     return (

@@ -1,5 +1,4 @@
 import React from "react";
-// import Lottie from "react-lottie";
 import iconLoader from "../../../assets/gif/loading.json";
 
 import styles from "./Loading.module.scss";

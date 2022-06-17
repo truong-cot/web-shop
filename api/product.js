@@ -13,8 +13,6 @@ const productAPI = {
     return axiosClient.get(`${routeName}?category=${query}`);
   },
   
-
-
 };
 
 export default productAPI;
