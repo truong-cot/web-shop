@@ -9,7 +9,7 @@ function UpdateRoute() {
     useEffect(() => {
         if (
             router.pathname !== '/login' &&
-            router.pathname !== '/singup'
+            router.pathname !== '/signup'
         ) {
             dispatch(updateRoute(router));
         }
