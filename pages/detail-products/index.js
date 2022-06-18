@@ -10,7 +10,7 @@ import styles from './AllProduct.module.scss';
 
 function AllProduct() {
     const [products, setProducts] = useState([]);
-    const [isActive, setIsActive] = useState(false);
+    // const [isActive, setIsActive] = useState('');
 
     const getProducts = async (type) => {
         try {
@@ -26,9 +26,10 @@ function AllProduct() {
     }, []);
 
     const handleFilter = (category) => {
-        setIsActive(!isActive);
         getProducts(category);
     };
+
+    const filter = ['Nam', 'Nữ', 'Vest', 'Kaki', 'Khoác gió'];
 
     return (
         <div className={styles.container}>
@@ -49,12 +50,21 @@ function AllProduct() {
                                 </div>
                                 Lọc
                             </div>
-                            <div className={styles.filterItem}>
-                                <Button onClick={() => handleFilter('Nam')} filter filterActive>
-                                    Nam
-                                </Button>
-                            </div>
-                            <div className={styles.filterItem}>
+
+                            {filter.map((item, index) => (
+                                <div key={index} className={styles.filterItem}>
+                                    <Button
+                                        onClick={() => {
+                                            handleFilter(item);
+                                        }}
+                                        filter
+                                    >
+                                        {item}
+                                    </Button>
+                                </div>
+                            ))}
+
+                            {/* <div className={styles.filterItem}>
                                 <Button onClick={() => handleFilter('Nữ')} filter>
                                     Nữ
                                 </Button>
@@ -73,7 +83,7 @@ function AllProduct() {
                                 <Button onClick={() => handleFilter('Khoác gió')} filter>
                                     Khoác gió
                                 </Button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
