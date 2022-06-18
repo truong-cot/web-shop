@@ -1,14 +1,14 @@
-import axiosClient from ".";
+import axiosClient from '.';
 
-const routeName = "/blogs";
+const routerName = '/blogs';
 
 const blogAPI = {
     getBlogs: () => {
-        return axiosClient.get(`${routeName}`);
+        return axiosClient.get(`${routerName}`);
     },
     getBlog: (id) => {
-        return axiosClient.get(`${routeName}/find/${id}`);
-    }
-}
+        return axiosClient.get(`${routerName}/find/${id}`);
+    },
+};
 
 export default blogAPI;

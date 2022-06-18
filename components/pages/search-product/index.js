@@ -1,11 +1,11 @@
 import React from 'react';
 import { BsSearch } from 'react-icons/bs';
 
+// import SearchPost from './search-post';
 import Product from './product';
-import SearchPost from './search-post';
 import styles from './Search.module.scss';
 
-function Search({ keyword }) {
+function Search({ keyword, data }) {
     return (
         <div className={styles.container}>
             <div className={styles.main}>
@@ -20,18 +20,18 @@ function Search({ keyword }) {
                 <h4 className={styles.des}>Sản phẩm</h4>
 
                 <div className={styles.searchProduct}>
-                    <Product></Product>
-                    <Product></Product>
-                    <Product></Product>
+                    {data?.map((item) => (
+                        <Product key={item._id} data={item}></Product>
+                    ))}
                 </div>
 
-                <h4 className={styles.postTitle}>Bài viết</h4>
+                {/* <h4 className={styles.postTitle}>Bài viết</h4>
 
                 <div className={styles.searchPosts}>
                     <SearchPost></SearchPost>
                     <SearchPost></SearchPost>
                     <SearchPost></SearchPost>
-                </div>
+                </div> */}
             </div>
         </div>
     );

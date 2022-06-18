@@ -120,7 +120,7 @@ function Information({ data }) {
                                 Thêm vào giỏ hàng
                             </Button>
                             <Link href="/payment">
-                                <a>
+                                <a className={styles.btnPay}>
                                     <Button primary rounded productDetail onClick={handleByProduct}>
                                         Mua ngay
                                     </Button>
