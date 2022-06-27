@@ -3,6 +3,7 @@ import QuestionItem from './../../components/pages/profile/QuestionItem';
 import styles from './Question.module.scss';
 import NavProfile from './../../components/pages/profile/NavProfile';
 import ContentProfile from './../../components/pages/profile/ContentProfile';
+import listQuestion from '../../api/question';
 
 function Question() {
     return (
@@ -12,11 +13,9 @@ function Question() {
                     <NavProfile />
                     <ContentProfile>
                         <div>
-                            <QuestionItem></QuestionItem>
-                            <QuestionItem></QuestionItem>
-                            <QuestionItem></QuestionItem>
-                            <QuestionItem></QuestionItem>
-                            <QuestionItem></QuestionItem>
+                            {listQuestion.map((item) => (
+                                <QuestionItem key={item.id} data={item} />
+                            ))}
                         </div>
                     </ContentProfile>
                 </div>

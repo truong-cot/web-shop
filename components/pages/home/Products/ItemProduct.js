@@ -8,6 +8,7 @@ import imgBtnAddCart from '../../../../assets/images/products/btnAddCart.png';
 import styles from './Products.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../../../redux/actions/cart';
+import { convertCoin } from '../../../../common/func/convertCoin';
 
 function ItemProduct({ data }) {
     const newCount = data?.price - (data?.discount * data?.price) / 100;
@@ -53,7 +54,7 @@ function ItemProduct({ data }) {
             </div>
 
             <div className={styles.sale}>
-                <del>{data?.price}$</del>
+                <del>{convertCoin(data?.price)}$</del>
                 <span>-{data?.discount}%</span>
             </div>
 
