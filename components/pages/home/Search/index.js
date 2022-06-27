@@ -1,7 +1,7 @@
 import { BsSearch } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 
-// import searchApi from '../../../../api/searchProduct';
+import searchApi from '../../../../api/searchProduct';
 import useDebounce from '../../../../hooks/useDebounce';
 import SearchProduct from './../../../../components/pages/search-product';
 import styles from './Search.module.scss';
@@ -21,15 +21,20 @@ function Search() {
     };
 
     useEffect(() => {
-        if (!keyword.trim()) {
+        if (!debounced.trim()) {
             return;
         }
 
-        fetch(`http://localhost:5000/api/products/search?value=${encodeURIComponent(debounced)}`)
-            .then((res) => res.json())
-            .then((res) => {
+        const searchProduct = async () => {
+            try {
+                const res = await searchApi.searchProduct(encodeURIComponent(debounced));
                 setSearchResult(res.response.menus);
-            });
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+        searchProduct();
     }, [debounced, keyword]);
 
     return (

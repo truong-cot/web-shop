@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, { useState, useEffect } from 'react';
 import { FaFilter } from 'react-icons/fa';
 
@@ -10,6 +11,7 @@ import styles from './AllProduct.module.scss';
 
 function AllProduct() {
     const [products, setProducts] = useState([]);
+    const [type, setType] = useState('Nam');
     // const [isActive, setIsActive] = useState('');
 
     const getProducts = async (type) => {
@@ -22,11 +24,11 @@ function AllProduct() {
     };
 
     useEffect(() => {
-        getProducts('Nam');
-    }, []);
+        getProducts(type);
+    }, [type]);
 
     const handleFilter = (category) => {
-        getProducts(category);
+        setType(category);
     };
 
     const filter = ['Nam', 'Nữ', 'Vest', 'Kaki', 'Khoác gió'];
@@ -52,15 +54,16 @@ function AllProduct() {
                             </div>
 
                             {filter.map((item, index) => (
-                                <div key={index} className={styles.filterItem}>
-                                    <Button
+                                <div key={index}>
+                                    <button
+                                        className={clsx(styles.filterItem, { [styles.active]: type === item })}
                                         onClick={() => {
                                             handleFilter(item);
                                         }}
                                         filter
                                     >
                                         {item}
-                                    </Button>
+                                    </button>
                                 </div>
                             ))}
 
