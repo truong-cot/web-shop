@@ -76,15 +76,10 @@ function Information({ data }) {
                         </div>
 
                         <div className={styles.price}>
-<<<<<<< HEAD
-                            <del className={styles.prevPrice}>{data?.price} vnđ</del>
-                            <h4 className={styles.beforePrice}>{data.price - (data.discount * data.price) / 100} vnđ</h4>
-=======
                             <del className={styles.prevPrice}>{convertCoin(data?.price)}đ</del>
                             <h4 className={styles.beforePrice}>
                                 {convertCoin(data.price - (data.discount * data.price) / 100)}đ
                             </h4>
->>>>>>> 99bb64d3f007f14bf5c4d1b9b3bde131be8d9798
                             <p className={styles.sale}>
                                 -<span>{data.discount}%</span>
                             </p>
