@@ -37,12 +37,12 @@ function HeaderLogin() {
                 <div className={styles.image}>
                     <Image src={avatar} alt="avatar" layout="fill" />
                 </div>
-                <div className={styles.logOut}>
-                    <LogOut></LogOut>
-                </div>
             </div>
             <div className={styles.icon}>
                 <BsChevronDown />
+                <div className={styles.logOut}>
+                    <LogOut></LogOut>
+                </div>
             </div>
         </div>
     );

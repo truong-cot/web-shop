@@ -83,15 +83,21 @@
         .image {
             width: 100%;
             border-radius: 50%;
-            cursor: pointer;
         }
+    }
+    .icon {
+        position: relative;
+        font-size: 24px;
+        color: #f8b945;
+        font-weight: 700;
+        margin-left: 4px;
+        cursor: pointer;
 
         .logOut {
             position: absolute;
-            padding-top: 12px;
+            padding-top: 32px;
             top: 100%;
-            left: -120px;
-            width: 100%;
+            left: -100px;
             z-index: 10;
             display: none;
             min-width: 200px;
@@ -100,12 +106,5 @@
         &:hover .logOut {
             display: block;
         }
-    }
-    .icon {
-        font-size: 24px;
-        color: #f8b945;
-        font-weight: 700;
-        margin-left: 4px;
-        cursor: pointer;
     }
 }
