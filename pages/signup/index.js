@@ -1,17 +1,17 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
-import router from 'next/router';
 import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import router from 'next/router';
 import { toast } from 'react-toastify';
 
-import RequireLogout from '../../components/proteced/RequireLogout';
-import Loading from '../../components/control/Loading';
 import authAPI from '../../api/auth';
-import Layout from '../../components/widgets/Layout';
-import styles from './Signup.module.scss';
 import logo from './../../assets/images/logo.svg';
 import Button from '../../components/control/Button';
+import Layout from '../../components/widgets/Layout';
+import Loading from '../../components/control/Loading';
+import RequireLogout from '../../components/proteced/RequireLogout';
+import styles from './Signup.module.scss';
 
 function LoginPage() {
     const [loading, setLoading] = useState(false);

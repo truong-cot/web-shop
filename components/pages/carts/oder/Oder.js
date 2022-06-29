@@ -1,12 +1,13 @@
-import { useDispatch } from 'react-redux';
 import React, { useRef, useEffect, useCallback } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { delToCart, updateCart } from '../../../../redux/actions/cart';
 import styles from './Oder.module.scss';
 
 function Oder({ data }) {
-    const firstUpdate = useRef(true);
     const dispatch = useDispatch();
+    const firstUpdate = useRef(true);
+
     useEffect(() => {
         /*---------- Không gọi dữ liệu khi lần đầu đc thêm vào DOM ----------*/
         if (firstUpdate.current) {
