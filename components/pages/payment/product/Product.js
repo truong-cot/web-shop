@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { convertCoin } from '../../../../common/func/convertCoin';
 import styles from './Product.module.scss';
 
 function Product({ data }) {
@@ -19,11 +20,11 @@ function Product({ data }) {
                     <span>M</span>
                 </p>
                 <p className={styles.price}>
-                    đ<span>{data.price}</span>
+                    đ<span>{convertCoin(data.price)}</span>
                 </p>
                 <p className={styles.quantity}>{data.quantily}</p>
                 <p className={styles.totalPrice}>
-                    đ<span>{newCount * data.quantily}</span>
+                    đ<span>{convertCoin(newCount * data.quantily)}</span>
                 </p>
             </div>
         </div>

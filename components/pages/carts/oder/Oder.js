@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { convertCoin } from '../../../../common/func/convertCoin';
 import { delToCart, updateCart } from '../../../../redux/actions/cart';
 import styles from './Oder.module.scss';
 
@@ -35,9 +36,9 @@ function Oder({ data }) {
             </div>
             <div className={styles.des}>
                 <p className={styles.size}>M</p>
-                <p className={styles.unitPrice}>đ{data.price}</p>
+                <p className={styles.unitPrice}>đ{convertCoin(data.price)}</p>
                 <p className={styles.quantily}>{data.quantily}</p>
-                <p className={styles.price}>đ{data.quantily * newCount}</p>
+                <p className={styles.price}>đ{convertCoin(data.quantily * newCount)}</p>
                 <div className={styles.btnDelete} onClick={handleDleteToCart}>
                     <button>Xoá</button>
                 </div>
