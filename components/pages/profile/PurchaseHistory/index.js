@@ -1,9 +1,9 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import styles from './PurchaseHistory.module.scss';
+import React, { useState, useEffect } from 'react';
+
 import ordersAPI from '../../../../api/orders';
 import { convertCoin } from '../../../../common/func/convertCoin';
 import { changeDateFormat } from '../../../../common/func/changeDateFormat';
+import styles from './PurchaseHistory.module.scss';
 
 function PurchaseHistory() {
     const user = JSON.parse(localStorage.getItem('user'));

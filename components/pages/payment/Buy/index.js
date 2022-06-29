@@ -31,7 +31,7 @@ function Buy({ data }) {
                         username: dataUser.username,
                         userId: dataUser._id,
                         products: cart,
-                        amount: `${beforeFinish + 5}`,
+                        amount: `${beforeFinish + 50000}`,
                         address: data?.specific,
                     };
                     const res = await ordersAPI.createOrder(dataSubmit, token);

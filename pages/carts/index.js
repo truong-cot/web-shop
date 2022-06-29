@@ -38,7 +38,7 @@ function Carts() {
                     )}
                 </div>
             </div>
-            <FooterCart></FooterCart>
+            <FooterCart />
         </div>
     );
 }
