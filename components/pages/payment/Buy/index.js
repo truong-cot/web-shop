@@ -38,7 +38,7 @@ function Buy({ data }) {
                     if (res.status === 'success') {
                         toast.success('Đặt hàng thàng công');
                         dispatch(getCart([]));
-                        router.replace('/purchase-order');
+                        router.replace('/transaction-history');
                     } else {
                         toast.error('Vui lòng thử lại sau ít phút');
                     }

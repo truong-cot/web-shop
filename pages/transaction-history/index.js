@@ -3,7 +3,7 @@ import React from 'react';
 import NavProfile from '../../components/pages/profile/NavProfile';
 import RequireLogin from '../../components/proteced/RequireLogin';
 import ContentProfile from '../../components/pages/profile/ContentProfile';
-import TransactionHistoryEmpty from '../../components/pages/profile/TransactionHistory/Empty';
+import PurchaseHistory from '../../components/pages/profile/PurchaseHistory';
 import styles from './TransactionHistory.module.scss';
 
 function TransactionHistory() {
@@ -18,7 +18,7 @@ function TransactionHistory() {
                                 <div className={styles.tite}>
                                     <h4>Lịch sử giao dịch</h4>
                                 </div>
-                                <TransactionHistoryEmpty />
+                                <PurchaseHistory />
                             </div>
                         </ContentProfile>
                     </div>

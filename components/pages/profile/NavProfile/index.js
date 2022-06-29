@@ -26,12 +26,7 @@ function NavProfile() {
                 </li>
                 <li className={styles.item}>
                     <Link href="/transaction-history">
-                        <a>Lịch sử giao dịch</a>
-                    </Link>
-                </li>
-                <li className={styles.item}>
-                    <Link href="/purchase-order">
-                        <a>Đơn mua</a>
+                        <a>Lịch sử mua hàng</a>
                     </Link>
                 </li>
                 <li className={styles.item}>
