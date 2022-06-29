@@ -36,11 +36,7 @@ function Oder({ data }) {
             </div>
             <div className={styles.des}>
                 <p className={styles.size}>M</p>
-<<<<<<< HEAD
-                <p className={styles.unitPrice}>{data.price} vnđ</p>
-=======
                 <p className={styles.unitPrice}>đ{convertCoin(data.price)}</p>
->>>>>>> 99bb64d3f007f14bf5c4d1b9b3bde131be8d9798
                 <p className={styles.quantily}>{data.quantily}</p>
                 <p className={styles.price}>đ{convertCoin(data.quantily * newCount)}</p>
                 <div className={styles.btnDelete} onClick={handleDleteToCart}>
