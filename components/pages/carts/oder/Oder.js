@@ -14,7 +14,7 @@ function Oder({ data }) {
             return;
         }
         dispatch(updateCart({ ...data }));
-    }, []);
+    }, [data, dispatch]);
 
     // newPrice
     const newCount = data?.price - (data?.discount * data?.price) / 100;

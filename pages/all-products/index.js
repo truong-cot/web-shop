@@ -1,9 +1,8 @@
-import clsx from 'clsx';
 import React, { useState, useEffect } from 'react';
+import clsx from 'clsx';
 import { FaFilter } from 'react-icons/fa';
 
 import productAPI from '../../api/product';
-import Button from './../../components/control/Button';
 import Banner from '../../components/pages/home/Banner';
 import Search from '../../components/pages/home/Search';
 import ItemProduct from '../../components/pages/home/Products/ItemProduct';
@@ -12,7 +11,7 @@ import styles from './AllProduct.module.scss';
 function AllProduct() {
     const [products, setProducts] = useState([]);
     const [type, setType] = useState('Nam');
-    // const [isActive, setIsActive] = useState('');
+    const filter = ['Nam', 'Nữ', 'Vest', 'Kaki', 'Khoác gió'];
 
     const getProducts = async (type) => {
         try {
@@ -30,8 +29,6 @@ function AllProduct() {
     const handleFilter = (category) => {
         setType(category);
     };
-
-    const filter = ['Nam', 'Nữ', 'Vest', 'Kaki', 'Khoác gió'];
 
     return (
         <div className={styles.container}>

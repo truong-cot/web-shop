@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux';
 import { BsFillStarFill, BsFillCartCheckFill } from 'react-icons/bs';
 
 import Button from '../../../control/Button';
-import imgBtnAddCart from '../../../../assets/images/products/btnAddCart.png';
-import styles from './Products.module.scss';
-import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../../../redux/actions/cart';
 import { convertCoin } from '../../../../common/func/convertCoin';
+import imgBtnAddCart from '../../../../assets/images/products/btnAddCart.png';
+import styles from './Products.module.scss';
 
 function ItemProduct({ data }) {
     const newCount = data?.price - (data?.discount * data?.price) / 100;

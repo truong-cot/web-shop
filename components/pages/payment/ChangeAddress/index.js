@@ -58,15 +58,10 @@ function ChangeAddress({ handleClose, getData }) {
     // submit
     const handleSubmit = (e) => {
         e.preventDefault();
-        // onSubmit();
-        // console.log(valueForm);
-        // console.log("Selected Options: ", city);
         setValueForm(valueForm);
         getData(valueForm);
         handleClose();
     };
-
-    // console.log(valueForm);
 
     return (
         <div className={styles.container}>
@@ -94,7 +89,6 @@ function ChangeAddress({ handleClose, getData }) {
                         key={`cityId_${selectedCity?.value}`}
                         isDisabled={cityOptions.length === 0}
                         options={cityOptions}
-                        // onChange={(option) => onCitySelect(option)}
                         onChange={getCity}
                         placeholder="Tỉnh/Thành"
                         defaultValue={selectedCity}
@@ -111,7 +105,6 @@ function ChangeAddress({ handleClose, getData }) {
                         key={`districtId_${selectedDistrict?.value}`}
                         isDisabled={districtOptions.length === 0}
                         options={districtOptions}
-                        // onChange={(option) => onDistrictSelect(option)}
                         onChange={getDistrict}
                         placeholder="Quận/Huyện"
                         defaultValue={selectedDistrict}
@@ -129,7 +122,6 @@ function ChangeAddress({ handleClose, getData }) {
                         isDisabled={wardOptions.length === 0}
                         options={wardOptions}
                         placeholder="Phường/Xã"
-                        // onChange={(option) => onWardSelect(option)}
                         onChange={getWard}
                         defaultValue={selectedWard}
                     />
@@ -139,11 +131,7 @@ function ChangeAddress({ handleClose, getData }) {
                     <input name="specific" type="specific" placeholder="Địa chỉ cụ thể" onChange={handleChangeInput} />
                 </div>
 
-                <div
-                    className={styles.button}
-                    onClick={handleSubmit}
-                    // onClick={handleClose}
-                >
+                <div className={styles.button} onClick={handleSubmit}>
                     <Button primary rounded productDetail>
                         Giao đến địa chỉ này
                     </Button>

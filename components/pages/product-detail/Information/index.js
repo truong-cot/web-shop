@@ -1,8 +1,8 @@
+import React, { memo, useCallback, useState } from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
-import { router, useRouter } from 'next/router';
-import { useDispatch, useSelector } from 'react-redux';
-import React, { memo, useCallback, useState } from 'react';
+import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
 import { BsFillStarFill, BsCartCheck } from 'react-icons/bs';
 
 import Button from '../../../control/Button';
@@ -11,8 +11,6 @@ import styles from './Information.module.scss';
 
 function Information({ data }) {
     const router = useRouter();
-    // Get value size
-    const [size, setSize] = useState(data.size);
 
     // Change quantity
     const [quantity, setQuantity] = useState(1);
@@ -30,19 +28,17 @@ function Information({ data }) {
 
     // add to cart
     const dispatch = useDispatch();
-    const { cart } = useSelector((state) => state.cart);
+
     const handleAddProduct = useCallback(() => {
         dispatch(addToCart({ ...data, quantily: quantity }));
         toast.success('Thêm sản phẩm thành công');
     }, [quantity, dispatch, data]);
 
-    // console.log(cart);
-
     // Buy product
     const handleByProduct = useCallback(() => {
         dispatch(addToCart({ ...data, quantily: quantity }));
         router.push('/payment');
-    }, [quantity, dispatch, data]);
+    }, [dispatch, data, quantity, router]);
 
     return (
         <div className={styles.container}>
@@ -86,12 +82,12 @@ function Information({ data }) {
                             </p>
                         </div>
 
-                        <div className={styles.sizes}>
+                        {/* <div className={styles.sizes}>
                             <div className={styles.title}>
                                 <p>Size</p>
                             </div>
                             <div className={styles.groupSize}>
-                                {size?.map((ele, index) => {
+                                {data.size?.map((ele, index) => {
                                     return (
                                         <Button
                                             key={index}
@@ -104,7 +100,7 @@ function Information({ data }) {
                                     );
                                 })}
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className={styles.quantity}>
                             <p className={styles.title}>Số lượng</p>
