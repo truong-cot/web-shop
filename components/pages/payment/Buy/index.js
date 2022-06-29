@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useSelector, useDispatch } from 'react-redux';
 import { useMemo } from 'react';
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/router';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { getCart } from '../../../../redux/actions/cart';
-import ordersAPI from '../../../../api/orders';
 import Button from './../../../control/Button';
+import ordersAPI from '../../../../api/orders';
+import { getCart } from '../../../../redux/actions/cart';
 import styles from './Buy.module.scss';
 
 function Buy({ data }) {

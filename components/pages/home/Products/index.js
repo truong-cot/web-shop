@@ -1,11 +1,10 @@
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 import ItemProduct from './ItemProduct';
 import Button from '../../../control/Button';
 import productAPI from '../../../../api/product';
 import styles from './Products.module.scss';
-
-import Link from 'next/link';
 
 function Products() {
     const [manClothes, setManClothes] = useState([]);
@@ -57,7 +56,7 @@ function Products() {
                             })}
                         </div>
                         <div className={styles.btn}>
-                            <Link href="/detail-products">
+                            <Link href="/all-products">
                                 <a>
                                     <Button rounded primary product>
                                         Xem thêm
@@ -75,7 +74,7 @@ function Products() {
                             })}
                         </div>
                         <div className={styles.btn}>
-                            <Link href="/detail-products">
+                            <Link href="/all-products">
                                 <a>
                                     <Button rounded primary product>
                                         Xem thêm
@@ -93,7 +92,7 @@ function Products() {
                             })}
                         </div>
                         <div className={styles.btn}>
-                            <Link href="/detail-products">
+                            <Link href="/all-products">
                                 <a>
                                     <Button rounded primary product>
                                         Xem thêm

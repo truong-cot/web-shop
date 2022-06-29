@@ -18,21 +18,21 @@ function DescriptionProduct({ data }) {
 
                     <div className={styles.posts}>
                         <div className={styles.title}>
-                            <h4>Bài viết liên quan:</h4>
+                            <h4>Bài viết của webshop:</h4>
                         </div>
                         <div className={styles.postItem}>
-                            <Link href="#">
-                                <a>http://duaca.vn/nhung_cach_che_bien_mon_an_ngon_tu_ca_hoi_1.html</a>
+                            <Link href="/blogs">
+                                <a>http://web-shop/blogs</a>
                             </Link>
                         </div>
                         <div className={styles.postItem}>
-                            <Link href="#">
-                                <a>http://duaca.vn/nhung_cach_che_bien_mon_an_ngon_tu_ca_hoi_1.html</a>
+                            <Link href="/blogs">
+                                <a>http://web-shop/blogs</a>
                             </Link>
                         </div>
                         <div className={styles.postItem}>
-                            <Link href="#">
-                                <a>http://duaca.vn/nhung_cach_che_bien_mon_an_ngon_tu_ca_hoi_1.html</a>
+                            <Link href="/blogs">
+                                <a>http://web-shop/blogs</a>
                             </Link>
                         </div>
                     </div>

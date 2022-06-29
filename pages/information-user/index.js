@@ -1,12 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
-import avatar from './../../assets/images/avatar.svg';
-
-import ContentProfile from '../../components/pages/profile/ContentProfile';
-import NavProfile from '../../components/pages/profile/NavProfile';
 import RequireLogin from '../../components/proteced/RequireLogin';
-import Button from '../../components/control/Button';
+import NavProfile from '../../components/pages/profile/NavProfile';
+import ContentProfile from '../../components/pages/profile/ContentProfile';
+// import avatar from './../../assets/images/avatar.svg';
+// import Button from '../../components/control/Button';
 import styles from './InformationUser.module.scss';
 
 function InformationUser() {
@@ -17,7 +16,8 @@ function InformationUser() {
                     <div className={styles.main}>
                         <NavProfile />
                         <ContentProfile>
-                            <div className={styles.profile}>
+                            <h3>Chức năng đang phát triển</h3>
+                            {/* <div className={styles.profile}>
                                 <div className={styles.title}>
                                     <h4>Chỉnh sửa hồ sơ cá nhân</h4>
                                 </div>
@@ -86,7 +86,7 @@ function InformationUser() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </ContentProfile>
                     </div>
                 </div>

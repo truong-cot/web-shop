@@ -14,7 +14,7 @@ function Oder({ data }) {
             return;
         }
         dispatch(updateCart({ ...data }));
-    }, []);
+    }, [data, dispatch]);
 
     // newPrice
     const newCount = data?.price - (data?.discount * data?.price) / 100;
@@ -34,7 +34,7 @@ function Oder({ data }) {
             </div>
             <div className={styles.des}>
                 <p className={styles.size}>M</p>
-                <p className={styles.unitPrice}>đ{data.price}</p>
+                <p className={styles.unitPrice}>{data.price} vnđ</p>
                 <p className={styles.quantily}>{data.quantily}</p>
                 <p className={styles.price}>đ{data.quantily * newCount}</p>
                 <div className={styles.btnDelete} onClick={handleDleteToCart}>

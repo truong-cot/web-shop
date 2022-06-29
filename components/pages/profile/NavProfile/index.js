@@ -1,19 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
-
-import avatar from './../../../../assets/images/avatar.svg';
+// import avatar from './../../../../assets/images/avatar.svg';
 import styles from './NavProfile.module.scss';
 
 function NavProfile() {
+    const user = JSON.parse(localStorage.getItem('user'));
+
     return (
         <div className={styles.container}>
             <div className={styles.user}>
                 <div className={styles.img}>
-                    <img src={avatar.src} alt="avatar" />
+                    <img src={user?.profilePicture} alt="avatar" />
                 </div>
                 <div className={styles.info}>
-                    <h4 className={styles.account}>truong.1609</h4>
-                    <p className={styles.name}>Dang ba truong</p>
+                    <h4 className={styles.account}>Tên khách hàng</h4>
+                    <p className={styles.name}>{user?.username}</p>
                 </div>
             </div>
 

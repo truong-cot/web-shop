@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import styles from './BlogItem.module.scss';
 import Link from 'next/link';
 import { AiOutlineEye } from 'react-icons/ai';
-import { useRouter } from 'next/router';
-import blogAPI from '../../../../api/blog';
-import Image from 'next/image';
+
+import styles from './BlogItem.module.scss';
 
 function BlogItem({ data }) {
     return (

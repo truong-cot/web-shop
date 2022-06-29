@@ -10,6 +10,14 @@ const ordersAPI = {
             },
         });
     },
+
+    getUserOrders: (userId,token) => {
+        return axiosClient.get(`${routeName}/find/user/${userId}`, {
+            headers: {
+                token: 'Bearer ' + token,
+            },
+        });
+    },
 };
 
 export default ordersAPI;
