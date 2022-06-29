@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import { useSelector, useDispatch } from 'react-redux';
 
+import { shipMoney } from '../../../../common/variable';
 import Button from './../../../control/Button';
 import ordersAPI from '../../../../api/orders';
 import { getCart } from '../../../../redux/actions/cart';
@@ -31,7 +32,7 @@ function Buy({ data }) {
                         username: dataUser.username,
                         userId: dataUser._id,
                         products: cart,
-                        amount: `${beforeFinish + 50000}`,
+                        amount: `${beforeFinish + shipMoney}`,
                         address: data?.specific,
                     };
                     const res = await ordersAPI.createOrder(dataSubmit, token);

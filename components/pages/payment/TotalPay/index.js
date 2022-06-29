@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
+import { shipMoney } from '../../../../common/variable';
 import { convertCoin } from '../../../../common/func/convertCoin';
 import styles from './TotalPay.module.scss';
 
 function TotalPay() {
-    const shipMoney = 50000;
     const { cart } = useSelector((state) => state.cart);
 
     const beforeFinish = useMemo(() => {
