@@ -11,7 +11,7 @@ const cart = (state = initialState, { type, payload }) => {
         case ADD_TO_CART: {
             if (
                 /*---------- Kiểm tra nếu đã có sản phẩm trong giỏ hàng, update số lượng ----------*/
-                state.cart.some((item) => item?._id === payload._id)
+                state.cart?.some((item) => item?._id === payload._id)
             ) {
                 const cart = state.cart.map((item) => {
                     if (item?._id === payload._id) {

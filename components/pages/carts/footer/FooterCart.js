@@ -14,7 +14,7 @@ function FooterCart() {
     const { isLogin } = useSelector((state) => state.auth);
 
     const totalPrice = useMemo(() => {
-        return cart.reduce((a, b) => {
+        return cart?.reduce((a, b) => {
             return a + (b.price - (b.discount * b.price) / 100) * b.quantily;
         }, 0);
     }, [cart]);
@@ -36,7 +36,7 @@ function FooterCart() {
             <div className="container">
                 <div className={styles.container}>
                     <p className={styles.title}>
-                        Tất cả (<span>{cart.length}</span> sản phẩm)
+                        Tất cả (<span>{cart?.length}</span> sản phẩm)
                     </p>
                     <div className={styles.totalPrice}>
                         <p className={styles.price}>

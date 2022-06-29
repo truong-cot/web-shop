@@ -33,7 +33,7 @@ function Header() {
                             </Link>
                             <div className={styles.quantity}>
                                 <p>
-                                    + <span>{cart.length}</span>
+                                    + <span>{cart?.length}</span>
                                 </p>
                             </div>
                         </li>

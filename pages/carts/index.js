@@ -27,11 +27,11 @@ function Carts() {
                             <p>Thao tác</p>
                         </div>
                     </div>
-                    {cart.length === 0 ? (
+                    {cart?.length === 0 ? (
                         <CartEmpty></CartEmpty>
                     ) : (
                         <div className={styles.listOder}>
-                            {cart.map((item) => (
+                            {cart?.map((item) => (
                                 <Oder key={item._id} data={item}></Oder>
                             ))}
                         </div>
