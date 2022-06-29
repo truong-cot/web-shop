@@ -1,11 +1,11 @@
-import { toast } from 'react-toastify';
 import React, { useMemo } from 'react';
-
-import Button from '../../../control/Button';
-import styles from './Footer.module.scss';
-
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
+import { toast } from 'react-toastify';
+
+import { convertCoin } from '../../../../common/func/convertCoin';
+import Button from '../../../control/Button';
+import styles from './Footer.module.scss';
 
 function FooterCart() {
     const router = useRouter();
@@ -40,7 +40,7 @@ function FooterCart() {
                     </p>
                     <div className={styles.totalPrice}>
                         <p className={styles.price}>
-                            đ<span>{totalPrice ? totalPrice : 0}</span>
+                            đ<span>{totalPrice ? convertCoin(totalPrice) : 0}</span>
                         </p>
                         <div className={styles.btn} onClick={handleSubmit}>
                             <Button rounded primary product>

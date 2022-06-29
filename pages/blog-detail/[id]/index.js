@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import styles from './BlogDetail.module.scss';
+import { useRouter } from 'next/router';
 import { AiOutlineEye } from 'react-icons/ai';
 
-import { useRouter } from 'next/router';
 import blogAPI from '../../../api/blog';
+import styles from './BlogDetail.module.scss';
 
 function BlogDetail() {
     const router = useRouter();

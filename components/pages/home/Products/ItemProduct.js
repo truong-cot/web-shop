@@ -54,12 +54,16 @@ function ItemProduct({ data }) {
             </div>
 
             <div className={styles.sale}>
-                <del>{convertCoin(data?.price)}$</del>
+                <del>{convertCoin(data?.price)}đ</del>
                 <span>-{data?.discount}%</span>
             </div>
 
             <div className={styles.price}>
+<<<<<<< HEAD
                 <h5>{newCount} vnđ</h5>
+=======
+                <h5>{convertCoin(newCount)}đ</h5>
+>>>>>>> 99bb64d3f007f14bf5c4d1b9b3bde131be8d9798
                 <div className={styles.btnProduct} onClick={handleAddToCart}>
                     <Button>
                         <img src={imgBtnAddCart.src} alt="anh btn" />

@@ -1,9 +1,11 @@
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
+import { convertCoin } from '../../../../common/func/convertCoin';
 import styles from './TotalPay.module.scss';
 
 function TotalPay() {
+    const shipMoney = 50000;
     const { cart } = useSelector((state) => state.cart);
 
     const beforeFinish = useMemo(() => {
@@ -24,13 +26,13 @@ function TotalPay() {
                     </div>
                     <div className={styles.price}>
                         <p>
-                            $<span>{beforeFinish.toLocaleString()}</span>
+                            đ<span>{convertCoin(beforeFinish)}</span>
                         </p>
                         <p>
-                            $<span>5</span>
+                            đ<span>{convertCoin(shipMoney)}</span>
                         </p>
                         <p>
-                            $<span>{(beforeFinish + 5).toLocaleString()}</span>
+                            đ<span>{convertCoin(beforeFinish + shipMoney)}</span>
                         </p>
                     </div>
                 </div>

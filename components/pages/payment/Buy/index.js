@@ -42,7 +42,9 @@ function Buy({ data }) {
                     } else {
                         toast.error('Vui lòng thử lại sau ít phút');
                     }
-                } catch (err) {}
+                } catch (err) {
+                    console.log(err);
+                }
             })();
         } else {
             toast.warn('Vui lòng chọn địa chỉ nhận hàng');

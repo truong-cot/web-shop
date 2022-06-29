@@ -1,9 +1,10 @@
 import React from 'react';
-import QuestionItem from './../../components/pages/profile/QuestionItem';
-import styles from './Question.module.scss';
-import NavProfile from './../../components/pages/profile/NavProfile';
-import ContentProfile from './../../components/pages/profile/ContentProfile';
+
 import listQuestion from '../../api/question';
+import NavProfile from './../../components/pages/profile/NavProfile';
+import QuestionItem from './../../components/pages/profile/QuestionItem';
+import ContentProfile from './../../components/pages/profile/ContentProfile';
+import styles from './Question.module.scss';
 
 function Question() {
     return (

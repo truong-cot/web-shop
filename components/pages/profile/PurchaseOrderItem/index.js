@@ -1,9 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import PurchaseOrderProductItem from './PurchaseOrderProductItem';
-import styles from './PurchaseOrderItem.module.scss';
 
-import Button from './../../../control/Button';
+import styles from './PurchaseOrderItem.module.scss';
 
 function PurchaseOrderItem() {
     return (

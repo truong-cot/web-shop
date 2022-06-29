@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { BsFillStarFill, BsCartCheck } from 'react-icons/bs';
 
 import Button from '../../../control/Button';
+import { convertCoin } from '../../../../common/func/convertCoin';
 import { addToCart } from '../../../../redux/actions/cart';
 import styles from './Information.module.scss';
 
@@ -75,32 +76,19 @@ function Information({ data }) {
                         </div>
 
                         <div className={styles.price}>
+<<<<<<< HEAD
                             <del className={styles.prevPrice}>{data?.price} vnđ</del>
                             <h4 className={styles.beforePrice}>{data.price - (data.discount * data.price) / 100} vnđ</h4>
+=======
+                            <del className={styles.prevPrice}>{convertCoin(data?.price)}đ</del>
+                            <h4 className={styles.beforePrice}>
+                                {convertCoin(data.price - (data.discount * data.price) / 100)}đ
+                            </h4>
+>>>>>>> 99bb64d3f007f14bf5c4d1b9b3bde131be8d9798
                             <p className={styles.sale}>
                                 -<span>{data.discount}%</span>
                             </p>
                         </div>
-
-                        {/* <div className={styles.sizes}>
-                            <div className={styles.title}>
-                                <p>Size</p>
-                            </div>
-                            <div className={styles.groupSize}>
-                                {data.size?.map((ele, index) => {
-                                    return (
-                                        <Button
-                                            key={index}
-                                            onClick={() => {
-                                                setGetValueSize(ele);
-                                            }}
-                                        >
-                                            {ele}
-                                        </Button>
-                                    );
-                                })}
-                            </div>
-                        </div> */}
 
                         <div className={styles.quantity}>
                             <p className={styles.title}>Số lượng</p>

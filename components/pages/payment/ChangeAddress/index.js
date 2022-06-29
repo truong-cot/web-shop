@@ -1,5 +1,6 @@
 import Select from 'react-select';
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import { AiOutlineClose } from 'react-icons/ai';
 
 import Button from './../../../control/Button';
@@ -58,9 +59,22 @@ function ChangeAddress({ handleClose, getData }) {
     // submit
     const handleSubmit = (e) => {
         e.preventDefault();
-        setValueForm(valueForm);
-        getData(valueForm);
-        handleClose();
+
+        if (valueForm.name !== '' && valueForm.phone !== '' && valueForm.specific !== '') {
+            setValueForm(valueForm);
+            getData(valueForm);
+            handleClose();
+            toast.success('Cập nhật địa chỉ nhận hàng thành công');
+        } else if (valueForm.name === '') {
+            toast.warn('Bạn chưa nhập vào tên người nhận hàng!');
+            return;
+        } else if (valueForm.phone === '') {
+            toast.warn('Bạn chưa nhập vào số điện thoại người nhận hàng!');
+            return;
+        } else if (valueForm.specific === '') {
+            toast.warn('Vui lòng thêm vào địa chỉ nhận hàng cụ thể!');
+            return;
+        }
     };
 
     return (
