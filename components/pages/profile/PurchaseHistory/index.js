@@ -26,7 +26,7 @@ function PurchaseHistory() {
 
     return (
         <div className={styles.container}>
-            {userOrders.length > 0 ? (
+            {userOrders?.length > 0 ? (
                 <table>
                     <tr>
                         <th>Mã đơn hàng</th>
